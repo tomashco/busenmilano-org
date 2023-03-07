@@ -1,67 +1,82 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
-        },
-      ],
-    },
-    {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features',
-          href: '#',
-        },
-        {
-          text: 'Pricing',
-          href: '#',
-        },
-        {
-          text: 'About us',
-          href: '#',
-        },
-        {
-          text: 'Contact',
-          href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
-    },
-    {
-      text: 'Widgets',
+      text: 'Bu-Sen Milano',
       href: '#',
     },
     {
-      text: 'Blog',
-      href: getBlogPermalink(),
+      text: 'Judo Educazione',
+      links: [
+        {
+          text: 'Scritti del fondatore',
+          href: '#',
+        },
+        {
+          text: 'Tecnica',
+          href: '#',
+        },
+        {
+          text: 'Didattica',
+          href: '#',
+        },
+        {
+          text: "Ricerche sull'educazione",
+          href: '#',
+        },
+        {
+          text: 'Storia e personaggi del judo',
+          href: '#',
+        },
+      ],
+    },
+    {
+      text: 'Video',
+      links: [
+        {
+          text: 'Congressi',
+          href: '#',
+        },
+        {
+          text: 'Judo',
+          href: '#',
+        },
+      ],
+    },
+    {
+      text: 'Judo Adattato',
+      href: '#',
+    },
+    {
+      text: 'Intorno al dojo',
+      links: [
+        {
+          text: 'Go',
+          href: '#',
+        },
+        {
+          text: 'Letture',
+          href: '#',
+        },
+        {
+          text: 'Tutorial',
+          href: '#',
+        },
+      ],
+    },
+    {
+      text: 'Appuntamenti',
+      href: '#',
+    },
+    {
+      text: 'Report',
+      href: '#',
     },
   ],
-  actions: [
-    { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
-  ],
+  actions: [{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }],
 };
-  
+
 export const footerData = {
   links: [
     {

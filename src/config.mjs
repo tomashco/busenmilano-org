@@ -1,15 +1,15 @@
-import defaultImage from './assets/images/default.png';
+import defaultImage from './assets/images/busenmilano-index.jpg';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'Busen Milano',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://www.busenmilano.org',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'Busen Milano',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    'La storia del Bu-sen di Milano è legata alla vita di Cesare Barioli, che iniziò a far judo quando in Italia non si conosceva ancora molto di questa disciplina.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
