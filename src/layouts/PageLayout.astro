@@ -2,28 +2,69 @@
 import Layout from '~/layouts/BaseLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
-import Announcement from '~/components/widgets/Announcement.astro';
 
 import { headerData, footerData } from '~/data';
 
 import { MetaSEO } from '~/types';
+import { Picture } from '@astrojs/image/components';
 
 export interface Props {
   meta?: MetaSEO;
+  pageTitle: string;
+  pageDescription: string;
+  pageImage?: string | any;
 }
 
-const { meta } = Astro.props;
+interface articleProps {
+  title: string;
+  href: string | any;
+}
+
+const {
+  meta,
+  pageTitle,
+  pageImage = await Astro.slots.render('image'),
+  pageDescription,
+  articles = await Astro.slots.render('articles'),
+} = Astro.props;
 ---
 
 <Layout {meta}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header {...headerData} showRssFeed showToggleTheme />
   </slot>
   <main>
-    <slot />
+    <div class="flex flex-col mx-auto align-middle max-w-[45rem] px-10">
+      <slot name="page-title">
+        {pageTitle && <h1 class="text-3xl py-6">{pageTitle}</h1>}
+      </slot>
+      <slot name="page-image">
+        <Picture
+          class="mx-auto pb-6 rounded-md"
+          widths={[400, 768, 1024, 2040]}
+          sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+          aspectRatio={730 / 370}
+          loading="eager"
+          width={730}
+          height={370}
+          {...pageImage}
+        />
+      </slot>
+      <slot />
+      {pageDescription && <slot set:html={pageDescription} name="page-description" />}
+      <!-- {pageDescription &&  dangerouslySetInnerHtml={{ _content: pageDescription }} />} -->
+      <!-- </slot> -->
+      <slot name="articles">
+        {
+          articles &&
+            articles.map(async ({ title, href }: articleProps) => (
+              <li>
+                <a href={href}>{title}</a>
+              </li>
+            ))
+        }
+      </slot>
+    </div>
   </main>
   <slot name="footer">
     <Footer {...footerData} />

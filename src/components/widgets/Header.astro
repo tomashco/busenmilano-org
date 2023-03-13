@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 import Logo from '~/components/Logo.astro';
-import ToggleTheme from '~/components/common/ToggleTheme.astro';
+// import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
 import { getHomePermalink } from '~/utils/permalinks';
@@ -24,54 +24,51 @@ interface MenuLink extends Link {
 export interface Props {
   links?: Array<MenuLink>;
   actions?: Array<ActionLink>;
-  isSticky?: boolean;
+  isHomepage?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: string;
 }
 
-const { links = [], isSticky = false, showToggleTheme = false, position = 'center' } = Astro.props;
+const { links = [] } = Astro.props;
 
 const linksLength = links.length;
 ---
 
 <header
   class:list={[
-    { sticky: isSticky, relative: !isSticky },
-    'top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100',
+    // { sticky: isSticky, relative: !isSticky },
+    // 'top-0 z-40 flex-none w-full transition-all ease-in duration-100',
   ]}
   id="header"
 >
-  <div class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between max-w-7xl">
-    <div class:list={[{ 'mr-auto': position === 'right' }, 'flex justify-between']}>
+  <div class="py-3 px-3">
+    <div>
       <div class="flex items-center md:hidden">
-        {showToggleTheme && <ToggleTheme />}
+        <!-- {showToggleTheme && <ToggleTheme />} -->
         <ToggleMenu />
       </div>
     </div>
-    <nav
-      class="items-center w-full md:w-auto hidden md:flex dark:text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
-      aria-label="Main navigation"
-    >
-      <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
+    <nav class="flex w-full text-l md:text-sm md:flex h-[calc(100vh-72px)] md:h-auto" aria-label="Main navigation">
+      <ul class="flex w-full justify-center flex-col pt-8 md:pt-0 md:flex-row">
         {
           links.map(({ text, href, links }, index) => (
-            <li class={`${links?.length ? 'dropdown' : ''} flex`}>
+            <li class={`${links?.length ? 'dropdown flex-col' : ''} flex`}>
               {Math.round(linksLength / 2 - 1) === index && (
-                <a class="flex items-center" href={getHomePermalink()}>
+                <a class="flex" href={getHomePermalink()}>
                   <Logo />
                 </a>
               )}
               {links?.length ? (
                 <>
-                  <button class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  <button class="font-medium hover:text-gray-900 px-4 py-3 w-full flex items-center transition duration-150 ease-in-out">
                     {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
                   </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                  <ul class="dropdown-menu md:backdrop-blur-md rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
-                      <li>
+                      <li class="flex justify-start md:justify-center w-full">
                         <a
-                          class="first:rounded-t last:rounded-b md:hover:bg-gray-200 dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap"
+                          class="first:rounded-t md:w-full md:text-center last:rounded-b md:hover:bg-gray-200 py-2 px-5 block whitespace-no-wrap"
                           href={href2}
                         >
                           {text2}
@@ -81,10 +78,7 @@ const linksLength = links.length;
                   </ul>
                 </>
               ) : (
-                <a
-                  class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  href={href}
-                >
+                <a class="font-medium px-4 py-3 flex items-center transition duration-150 ease-in-out" href={href}>
                   {text}
                 </a>
               )}
@@ -93,10 +87,10 @@ const linksLength = links.length;
         }
       </ul>
     </nav>
-    <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
+    <!-- <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
       <div class="hidden items-center md:flex">
         {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
       </div>
-    </div>
+    </div> -->
   </div>
 </header>

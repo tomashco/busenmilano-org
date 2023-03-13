@@ -1,28 +1,17 @@
 ---
-import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
-
-interface CallToAction {
-  text: string;
-  href: string;
-  icon?: string;
-}
 
 export interface Props {
   title?: string;
-  subtitle?: string;
-  callToAction?: string | CallToAction;
-  callToAction2?: string | CallToAction;
-  image?: string | any; // TODO: find HTMLElementProps
+  image?: string | any;
+  titleImage?: string | any;
 }
 
 const {
   title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  content = await Astro.slots.render('content'),
-  callToAction = await Astro.slots.render('callToAction'),
-  callToAction2 = await Astro.slots.render('callToAction2'),
+  menu = await Astro.slots.render('menu'),
   image = await Astro.slots.render('image'),
+  titleImage = await Astro.slots.render('titleImage'),
 } = Astro.props;
 ---
 
@@ -32,78 +21,55 @@ const {
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20">
       <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
-        {
-          title && (
-            <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
-              set:html={title}
-            />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-            {
-              callToAction && (
-                <div class="flex w-full sm:w-auto">
-                  {typeof callToAction === 'string' ? (
-                    <Fragment set:html={callToAction} />
-                  ) : (
-                    <a class="btn btn-primary sm:mb-0 w-full" href={callToAction?.href} target="_blank" rel="noopener">
-                      {callToAction?.icon && (
-                        <>
-                          <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
-                        </>
-                      )}
-                      {callToAction?.text}
-                    </a>
-                  )}
-                </div>
-              )
-            }
-            {
-              callToAction2 && (
-                <div class="flex w-full sm:w-auto">
-                  {typeof callToAction2 === 'string' ? (
-                    <Fragment set:html={callToAction2} />
-                  ) : (
-                    <a class="btn w-full" href={callToAction2?.href}>
-                      {callToAction2?.icon && (
-                        <>
-                          <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
-                        </>
-                      )}
-                      {callToAction2.text}
-                    </a>
-                  )}
-                </div>
-              )
-            }
-          </div>
+        <div class="flex justify-between mb-4 px-24">
+          {title && <p class="mt-6 text-4xl" set:html={title} />}
+          {
+            titleImage && (
+              <div>
+                {typeof titleImage === 'string' ? (
+                  <Fragment set:html={titleImage} />
+                ) : (
+                  <Picture
+                    class="mx-auto rounded-md"
+                    widths={[100]}
+                    sizes="100px"
+                    fit="inside"
+                    aspectRatio="1:1"
+                    loading="eager"
+                    width={100}
+                    height={100}
+                    {...titleImage}
+                  />
+                )}
+              </div>
+            )
+          }
         </div>
-        {content && <Fragment set:html={content} />}
-      </div>
-      <div>
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Picture
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  aspectRatio={1024 / 576}
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
+        <div>
+          {
+            image && (
+              <div class="relative m-auto max-w-5xl">
+                {typeof image === 'string' ? (
+                  <Fragment set:html={image} />
+                ) : (
+                  <Picture
+                    class="mx-auto rounded-md w-full"
+                    widths={[400, 768, 1024, 2040]}
+                    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                    aspectRatio={960 / 174}
+                    loading="eager"
+                    width={960}
+                    height={174}
+                    {...image}
+                  />
+                )}
+              </div>
+            )
+          }
+        </div>
+        <div class="max-w-7xl mx-auto">
+          {menu && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={menu} />}
+        </div>
       </div>
     </div>
   </div>
