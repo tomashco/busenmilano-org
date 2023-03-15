@@ -62,9 +62,10 @@ const linksLength = links.length;
               {links?.length ? (
                 <>
                   <button class="font-medium hover:text-gray-900 px-4 py-3 w-full flex items-center transition duration-150 ease-in-out">
-                    {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
+                    <a href={href}>{text}</a>
+                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
                   </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                  <ul class="dropdown-menu  mt-9 md:backdrop-blur-md rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li class="flex justify-start md:justify-center w-full">
                         <a

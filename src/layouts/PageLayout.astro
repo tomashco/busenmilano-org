@@ -13,11 +13,16 @@ export interface Props {
   pageTitle: string;
   pageDescription: string;
   pageImage?: string | any;
+  links?: { title: string; href: string }[];
 }
 
 interface articleProps {
   title: string;
   href: string | any;
+  image: {
+    src: string | any;
+    alt: string;
+  };
 }
 
 const {
@@ -26,6 +31,7 @@ const {
   pageImage = await Astro.slots.render('image'),
   pageDescription,
   articles = await Astro.slots.render('articles'),
+  links = await Astro.slots.render('links'),
 } = Astro.props;
 ---
 
@@ -52,21 +58,46 @@ const {
       </slot>
       <slot />
       {pageDescription && <slot set:html={pageDescription} name="page-description" />}
+      {
+        links && (
+          <slot>
+            <ul />
+            {links.map(({ title, href }) => (
+              <li>
+                <a href={href}>{title}</a>
+              </li>
+            ))}
+          </slot>
+        )
+      }
+
       <!-- {pageDescription &&  dangerouslySetInnerHtml={{ _content: pageDescription }} />} -->
       <!-- </slot> -->
       <slot name="articles">
         {
           articles &&
-            articles.map(async ({ title, href }: articleProps) => (
-              <li>
-                <a href={href}>{title}</a>
+            articles.map(async ({ title, href, image }: articleProps) => (
+              <li class="flex p-6 hover:bg-[#e1e1e1]">
+                <Picture
+                  class="rounded-md"
+                  widths={[100]}
+                  sizes="150px"
+                  aspectRatio={1 / 1}
+                  loading="eager"
+                  width={150}
+                  height={150}
+                  {...image}
+                />
+                <a class="px-6 pt-3 text-lg italic font-serif hover:text-[#cf2e2e]" href={href}>
+                  {title}
+                </a>
               </li>
             ))
         }
       </slot>
     </div>
   </main>
-  <slot name="footer">
-    <Footer {...footerData} />
-  </slot>
 </Layout>
+<slot name="footer">
+  <Footer {...footerData} />
+</slot>

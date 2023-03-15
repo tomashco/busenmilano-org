@@ -8,6 +8,7 @@ export const headerData = {
     },
     {
       text: 'Judo Educazione',
+      href: 'judo-educazione',
       links: [
         {
           text: 'Scritti del fondatore',
@@ -33,6 +34,7 @@ export const headerData = {
     },
     {
       text: 'Video',
+      href: 'video',
       links: [
         {
           text: 'Congressi',
@@ -50,6 +52,7 @@ export const headerData = {
     },
     {
       text: 'Intorno al dojo',
+      href: 'intorno-dojo',
       links: [
         {
           text: 'Go',
@@ -96,16 +99,66 @@ export const pageData = {
     la nuova sede, torneremo a Milano, e avrà le caratteristiche predisposte da Cesare Barioli. Chiediamo
     scusa per questa pallida presentazione, ma abbiamo scelto di non raccontare ed offrire, invece, al lettore
     la possibilità di ricostruire un po’ di “storia” attraverso i testi, articoli, foto e racconti che potrà
-    leggere, di volta in volta, su queste pagine. Per info e chiarimenti scrivere a: <a href="mailto:infobusenmilano@gmail.com">infobusenmilano@gmail.com</p>`,
+    leggere, di volta in volta, su queste pagine. Per info e chiarimenti scrivere a: <a class="hover:text-[#cf2e2e] text-blue-700 underline" href="mailto:infobusenmilano@gmail.com">infobusenmilano@gmail.com</p>`,
     articles: [
-      { title: 'La necessità di una filosofia', href: '/pdf/La-necessita-di-una-filosofia.pdf' },
-      { title: 'Zenite, zen notiziario', href: '/pdf/Caro-Faustoper-sito.pdf' },
-      { title: 'Marcello presenta Cesare Barioli', href: '/pdf/CB-presentato-da-M.-Bernardi.pdf' },
+      {
+        title: 'La necessità di una filosofia',
+        href: '/pdf/La-necessita-di-una-filosofia.pdf',
+        image: { src: import('~/assets/images/thumbnails/necessita-filosofia.jpg'), alt: 'necessita filosofia' },
+      },
+      {
+        title: 'Zenite, zen notiziario',
+        href: '/pdf/Caro-Faustoper-sito.pdf',
+        image: { src: import('~/assets/images/thumbnails/zenite.jpg'), alt: 'zenite' },
+      },
+      {
+        title: 'Marcello presenta Cesare Barioli',
+        href: '/pdf/CB-presentato-da-M.-Bernardi.pdf',
+        image: { src: import('~/assets/images/thumbnails/bernardi.jpg'), alt: 'bernardi' },
+      },
       {
         title: '“Il judo educativo”, conferenza all’università dell’Aquila, 23/11/1999',
         href: '/pdf/conferenza-universita-dellAquila.pdf',
+        image: { src: import('~/assets/images/thumbnails/judo-educativo.jpg'), alt: 'judo educativo' },
       },
-      { title: 'Al nostro Maestro di judo e di vita', href: '/pdf/Maestro-di-judo.pdf' },
+      {
+        title: 'Al nostro Maestro di judo e di vita',
+        href: '/pdf/Maestro-di-judo.pdf',
+        image: { src: import('~/assets/images/thumbnails/maestro-judo.jpg'), alt: 'maestro judo' },
+      },
+    ],
+  },
+  judoEducazione: {
+    pageTitle: 'Judo Educazione',
+    pageImage: { src: import('~/assets/images/judo-educazione.jpg'), alt: 'judo-educazione' },
+    pageDescription: `<p class="pb-6">La parola “judo”, che traduciamo Via dell’adattabilità esprime una disciplina formativa a beneficio dei giovani, formulata dal signor Jigoro Kano (1860-1938) tra il 1882, data di nascita dell’istituto Kodokan: Luogo per la ricerca della Via, e il 1922 (quando dichiarato completo nei suoi fini e nei suoi mezzi il judo venne presentato all’imperatore)
+    Basterebbero queste poche righe per introdurre il judo del fondatore, ma dobbiamo aggiungere:
+        che il signor Kano non si raffigura come maestro imbattibile di un’arte marziale, ma come un judoka che ha realizzato la sua personalità da giovane per metterla al servizio del Paese e per offrire il suo prodotto culturale al mondo intero;
+        che l’applicazione di un paradigma educativo alla formazione dei giovani, affidato alla scuola (in Giappone) è fallita per l’ingerenza dei militari, che hanno usato la scuola, l’educazione e lo sport a scopi sciovinisti e per esaltare la guerra;
+        che questa situazione ha cancellato in maniera dirompente la proposta educativa del judo, favorendone la trasformazione in sport mondiale;
+        che il ju-sport differisce dal judo in ogni aspetto della pratica: l’allenamento, l’esercizio libero, quello di Forma, i rapporti fra praticanti e verso gli altri.
+    Buona lettura!`,
+    links: [
+      {
+        title: 'Scritti del fondatore',
+        href: '/scritti-fondatore',
+      },
+      {
+        title: 'Tecnica',
+        href: '/tecnica',
+      },
+      {
+        title: 'Didattica',
+        href: '/didattica',
+      },
+      {
+        title: "Ricerche sull'educazione",
+        href: '/ricerche-educazione',
+      },
+      {
+        title: 'Storia e personaggi del judo',
+        href: '/storia-personaggi',
+      },
     ],
   },
 };
