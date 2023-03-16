@@ -3,8 +3,8 @@ import defaultImage from './assets/images/busenmilano-index.jpg';
 const CONFIG = {
   name: 'Busen Milano',
 
-  origin: 'https://www.busenmilano.org',
-  basePathname: '/',
+  origin: 'https://tomashco.github.io',
+  basePathname: '/busenmilano',
   trailingSlash: false,
 
   title: 'Busen Milano',
