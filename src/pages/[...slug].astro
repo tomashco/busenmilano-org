@@ -39,13 +39,7 @@ const meta = {
   dontUseTitleTemplate: true,
 };
 
-const {
-  pageTitle = '',
-  pageImage = { src: '', alt: '' },
-  pageDescription = '',
-  articles = [],
-  links = [],
-} = Astro.props;
+const { pageTitle, pageImage, pageDescription, articles, links } = Astro.props;
 ---
 
 <Layout {...{ pageTitle, pageImage, pageDescription, articles, links }} {meta} />

@@ -1,14 +1,14 @@
-import { getPermalink, getAsset } from './utils/permalinks';
+import { SITE } from '~/config.mjs';
 
 export const headerData = {
   links: [
     {
       text: 'Bu-Sen Milano',
-      href: '/busen-milano',
+      href: SITE.basePathname + '/busen-milano',
     },
     {
       text: 'Judo Educazione',
-      href: '/judo-educazione',
+      href: SITE.basePathname + '/judo-educazione',
       links: [
         {
           text: 'Scritti del fondatore',
@@ -34,7 +34,7 @@ export const headerData = {
     },
     {
       text: 'Video',
-      href: '/video',
+      href: SITE.basePathname + '/video',
       links: [
         {
           text: 'Congressi',
@@ -48,11 +48,11 @@ export const headerData = {
     },
     {
       text: 'Judo Adattato',
-      href: '/judo-adattato',
+      href: SITE.basePathname + '/judo-adattato',
     },
     {
       text: 'Intorno al dojo',
-      href: '/intorno-dojo',
+      href: SITE.basePathname + '/intorno-dojo',
       links: [
         {
           text: 'Go',
@@ -70,11 +70,11 @@ export const headerData = {
     },
     {
       text: 'Appuntamenti',
-      href: '/appuntamenti',
+      href: SITE.basePathname + '/appuntamenti',
     },
     {
       text: 'Report',
-      href: '/report',
+      href: SITE.basePathname + '/report',
     },
   ],
 };
@@ -104,27 +104,27 @@ export const pageData = [
     articles: [
       {
         title: 'La necessità di una filosofia',
-        href: '/pdf/La-necessita-di-una-filosofia.pdf',
+        href: SITE.basePathname + '/pdf/La-necessita-di-una-filosofia.pdf',
         image: { src: import('~/assets/images/thumbnails/necessita-filosofia.jpg'), alt: 'necessita filosofia' },
       },
       {
         title: 'Zenite, zen notiziario',
-        href: '/pdf/Caro-Faustoper-sito.pdf',
+        href: SITE.basePathname + '/pdf/Caro-Faustoper-sito.pdf',
         image: { src: import('~/assets/images/thumbnails/zenite.jpg'), alt: 'zenite' },
       },
       {
         title: 'Marcello presenta Cesare Barioli',
-        href: '/pdf/CB-presentato-da-M.-Bernardi.pdf',
+        href: SITE.basePathname + '/pdf/CB-presentato-da-M.-Bernardi.pdf',
         image: { src: import('~/assets/images/thumbnails/bernardi.jpg'), alt: 'bernardi' },
       },
       {
         title: '“Il judo educativo”, conferenza all’università dell’Aquila, 23/11/1999',
-        href: '/pdf/conferenza-universita-dellAquila.pdf',
+        href: SITE.basePathname + '/pdf/conferenza-universita-dellAquila.pdf',
         image: { src: import('~/assets/images/thumbnails/judo-educativo.jpg'), alt: 'judo educativo' },
       },
       {
         title: 'Al nostro Maestro di judo e di vita',
-        href: '/pdf/Maestro-di-judo.pdf',
+        href: SITE.basePathname + '/pdf/Maestro-di-judo.pdf',
         image: { src: import('~/assets/images/thumbnails/maestro-judo.jpg'), alt: 'maestro judo' },
       },
     ],
@@ -170,12 +170,12 @@ export const pageData = [
     articles: [
       {
         title: 'Il contributo del judo all’Educazione di Kano Jigoro (translation with original speech)',
-        href: '/pdf/conferenza-di-los-angeles.pdf',
+        href: SITE.basePathname + '/pdf/conferenza-di-los-angeles.pdf',
         image: { src: import('~/assets/images/thumbnails/kanolosangeles-150x150.jpg'), alt: 'contributo educazione' },
       },
       {
         title: 'Cos’è il Kodokan judo, di Kano Jigoro',
-        href: '/pdf/Cose-il-kodokan-judo.pdf',
+        href: SITE.basePathname + '/pdf/Cose-il-kodokan-judo.pdf',
         image: {
           src: import('~/assets/images/thumbnails/vecchio_kodokan-150x150.jpg'),
           alt: 'vecchio_kodokan-150x150',
@@ -183,7 +183,7 @@ export const pageData = [
       },
       {
         title: 'Sull’insegnamento del Bojutsu, di Kano Jigoro',
-        href: '/pdf/bojutsu.pdf',
+        href: SITE.basePathname + '/pdf/bojutsu.pdf',
         image: { src: import('~/assets/images/thumbnails/bojutsu-146x150.gif'), alt: 'bojutsu-146x150' },
       },
     ],
@@ -195,12 +195,12 @@ export const pageData = [
     articles: [
       {
         title: 'Le kei del metodo Oda',
-        href: '/pdf/Le-Kei-del-metodo-Oda.pdf',
+        href: SITE.basePathname + '/pdf/Le-Kei-del-metodo-Oda.pdf',
         image: { src: import('~/assets/images/thumbnails/keioda-150x150.png'), alt: 'kei metodo oda' },
       },
       {
         title: 'Go, chowa e yawara',
-        href: '/pdf/gochowa-e-yawara.pdf',
+        href: SITE.basePathname + '/pdf/gochowa-e-yawara.pdf',
         image: {
           src: import('~/assets/images/thumbnails/Jigoro_Kano_and_Kyuzo_Mifune-150x150.jpg'),
           alt: 'kano jigoro e kyuzo mifune',
@@ -208,7 +208,7 @@ export const pageData = [
       },
       {
         title: 'Libretto del Sig. Koizumi',
-        href: '/pdf/libretto-koizumi.pdf',
+        href: SITE.basePathname + '/pdf/libretto-koizumi.pdf',
         image: {
           src: import('~/assets/images/thumbnails/koizumi-150x150.png'),
           alt: 'koizumi',
@@ -223,12 +223,12 @@ export const pageData = [
     articles: [
       {
         title: 'Brevi riflessioni sul drop out',
-        href: '/pdf/Brevi-riflessioni-sul-drop-out.pdf',
+        href: SITE.basePathname + '/pdf/Brevi-riflessioni-sul-drop-out.pdf',
         image: { src: import('~/assets/images/thumbnails/dropout-150x150.jpg'), alt: 'dropout' },
       },
       {
         title: 'Il corso Elementare, il Corso-base e lo Sviluppo dello Speciale',
-        href: '/pdf/corso-elementare.pdf',
+        href: SITE.basePathname + '/pdf/corso-elementare.pdf',
         image: {
           src: import('~/assets/images/thumbnails/corsoelementare-150x150.png'),
           alt: 'corso elementare',
@@ -236,7 +236,7 @@ export const pageData = [
       },
       {
         title: 'Randori secondo Kano Jigoro',
-        href: '/pdf/randori-secondo-kano.pdf',
+        href: SITE.basePathname + '/pdf/randori-secondo-kano.pdf',
         image: {
           src: import('~/assets/images/thumbnails/randori-150x150.png'),
           alt: 'randori',
@@ -251,12 +251,12 @@ export const pageData = [
     articles: [
       {
         title: 'Una ricerca sulle amazzoni',
-        href: '/pdf/una-ricerca-sulle-amazzoni1.pdf',
+        href: SITE.basePathname + '/pdf/una-ricerca-sulle-amazzoni1.pdf',
         image: { src: import('~/assets/images/thumbnails/Amazons-150x150.jpg'), alt: 'Amazons' },
       },
       {
         title: 'Il funzionamento morale: pensiero e cognizione',
-        href: '/pdf/il-funzionamento-morale-pensiero-e-cognizione.pdf',
+        href: SITE.basePathname + '/pdf/il-funzionamento-morale-pensiero-e-cognizione.pdf',
         image: {
           src: import('~/assets/images/thumbnails/child-development-150x150.jpg'),
           alt: 'child-development',
@@ -264,7 +264,7 @@ export const pageData = [
       },
       {
         title: 'Potenzialità e capacità della razza umana',
-        href: '/pdf/potenzialita-e-capacita-della-razza-umana.pdf',
+        href: SITE.basePathname + '/pdf/potenzialita-e-capacita-della-razza-umana.pdf',
         image: {
           src: import('~/assets/images/thumbnails/iris-150x150.jpg'),
           alt: 'iris',
@@ -272,7 +272,7 @@ export const pageData = [
       },
       {
         title: 'Erich Neumann: storia delle origini della coscienza',
-        href: '/pdf/neuman.pdf',
+        href: SITE.basePathname + '/pdf/neuman.pdf',
         image: {
           src: import('~/assets/images/thumbnails/neumann-150x150.jpg'),
           alt: 'neumann',
@@ -287,7 +287,7 @@ export const pageData = [
     articles: [
       {
         title: 'Documenti sul Sig. Abbe',
-        href: '/pdf/kenshiro-abbe1.pdf',
+        href: SITE.basePathname + '/pdf/kenshiro-abbe1.pdf',
         image: {
           src: import('~/assets/images/thumbnails/Kenshiro-Abbe-Cesare-Barioli-150x150.jpg'),
           alt: 'abbe barioli',
@@ -295,7 +295,7 @@ export const pageData = [
       },
       {
         title: '4 magnifici signori del judo',
-        href: '/pdf/i-4-magnifici.pdf',
+        href: SITE.basePathname + '/pdf/i-4-magnifici.pdf',
         image: {
           src: import('~/assets/images/thumbnails/4magnifici-150x150.png'),
           alt: '4 magnifici',
@@ -303,7 +303,7 @@ export const pageData = [
       },
       {
         title: ' Moshe Feldenkrais',
-        href: '/pdf/feldenkrais.pdf',
+        href: SITE.basePathname + '/pdf/feldenkrais.pdf',
         image: {
           src: import('~/assets/images/thumbnails/Moshe_talk-150x150.jpg'),
           alt: 'moshe feldenkrais',
@@ -311,7 +311,7 @@ export const pageData = [
       },
       {
         title: 'Ushijima Tatsukuma',
-        href: '/pdf/Ushijima.pdf',
+        href: SITE.basePathname + '/pdf/Ushijima.pdf',
         image: {
           src: import('~/assets/images/thumbnails/Tatsukuma_Ushijima-150x150.jpg'),
           alt: 'ushijima',
@@ -348,67 +348,3 @@ export const pageData = [
   //   ],
   // },
 ];
-
-export const footerData = {
-  links: [
-    {
-      title: 'Product',
-      links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
-      ],
-    },
-    {
-      title: 'Platform',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
-      ],
-    },
-  ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
-  socialLinks: [
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
-  ],
-  footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
-};

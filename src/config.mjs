@@ -5,7 +5,7 @@ const CONFIG = {
 
   origin: 'https://tomashco.github.io',
   basePathname: '/busenmilano',
-  trailingSlash: false,
+  trailingSlash: true,
 
   title: 'Busen Milano',
   description:

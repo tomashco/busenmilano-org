@@ -2,8 +2,8 @@
 import Layout from '~/layouts/BaseLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
-
-import { headerData, footerData } from '~/data';
+import { headerData } from '~/data';
+import { SITE } from '~/config.mjs';
 
 import { MetaSEO } from '~/types';
 import { Picture } from '@astrojs/image/components';
@@ -26,14 +26,7 @@ export interface Props {
   links?: { title: string; href: string }[];
 }
 
-const {
-  meta,
-  pageTitle,
-  pageImage = await Astro.slots.render('image'),
-  pageDescription,
-  articles = [],
-  links,
-} = Astro.props;
+const { meta, pageTitle, pageImage, pageDescription, articles, links } = Astro.props;
 
 const { slug } = Astro.params;
 ---
@@ -63,19 +56,15 @@ const { slug } = Astro.params;
       {pageDescription && <slot set:html={pageDescription} name="page-description" />}
       {
         links && (
-          <slot>
-            <ul />
+          <ul>
             {links.map(({ title, href }) => (
               <li>
-                <a href={slug + href}>{title}</a>
+                <a href={`${SITE.basePathname}/${slug}${href}`}>{title}</a>
               </li>
             ))}
-          </slot>
+          </ul>
         )
       }
-
-      <!-- {pageDescription &&  dangerouslySetInnerHtml={{ _content: pageDescription }} />} -->
-      <!-- </slot> -->
       <slot name="articles">
         {
           articles &&
@@ -102,5 +91,5 @@ const { slug } = Astro.params;
   </main>
 </Layout>
 <slot name="footer">
-  <Footer {...footerData} />
+  <Footer />
 </slot>
