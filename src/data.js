@@ -4,83 +4,84 @@ export const headerData = {
   links: [
     {
       text: 'Bu-Sen Milano',
-      href: 'busenmilano',
+      href: '/busen-milano',
     },
     {
       text: 'Judo Educazione',
-      href: 'judo-educazione',
+      href: '/judo-educazione',
       links: [
         {
           text: 'Scritti del fondatore',
-          href: 'scritti-fondatore',
+          href: '/scritti-fondatore',
         },
         {
           text: 'Tecnica',
-          href: 'tecnica',
+          href: '/tecnica',
         },
         {
           text: 'Didattica',
-          href: 'didattica',
+          href: '/didattica',
         },
         {
           text: "Ricerche sull'educazione",
-          href: 'ricerche-educazione',
+          href: '/ricerche-educazione',
         },
         {
           text: 'Storia e personaggi del judo',
-          href: 'storia',
+          href: '/storia',
         },
       ],
     },
     {
       text: 'Video',
-      href: 'video',
+      href: '/video',
       links: [
         {
           text: 'Congressi',
-          href: 'video-congressi',
+          href: '/video-congressi',
         },
         {
           text: 'Judo',
-          href: 'video-judo',
+          href: '/video-judo',
         },
       ],
     },
     {
       text: 'Judo Adattato',
-      href: 'judo-adattato',
+      href: '/judo-adattato',
     },
     {
       text: 'Intorno al dojo',
-      href: 'intorno-dojo',
+      href: '/intorno-dojo',
       links: [
         {
           text: 'Go',
-          href: 'go',
+          href: '/go',
         },
         {
           text: 'Letture',
-          href: 'letture',
+          href: '/letture',
         },
         {
           text: 'Tutorial',
-          href: 'tutorial',
+          href: '/tutorial',
         },
       ],
     },
     {
       text: 'Appuntamenti',
-      href: 'appuntamenti',
+      href: '/appuntamenti',
     },
     {
       text: 'Report',
-      href: 'report',
+      href: '/report',
     },
   ],
 };
 
-export const pageData = {
-  busenMilano: {
+export const pageData = [
+  {
+    slug: 'busen-milano',
     pageTitle: 'Bu-Sen Milano',
     pageImage: { src: import('~/assets/images/busen-milano.jpg'), alt: 'busen-milano' },
     pageDescription: `<p class="pb-6">La storia del Bu-sen di Milano è legata alla vita di Cesare Barioli, che iniziò a far judo quando in
@@ -128,16 +129,17 @@ export const pageData = {
       },
     ],
   },
-  judoEducazione: {
+  {
+    slug: 'judo-educazione',
     pageTitle: 'Judo Educazione',
     pageImage: { src: import('~/assets/images/judo-educazione.jpg'), alt: 'judo-educazione' },
     pageDescription: `<p class="pb-6">La parola “judo”, che traduciamo Via dell’adattabilità esprime una disciplina formativa a beneficio dei giovani, formulata dal signor Jigoro Kano (1860-1938) tra il 1882, data di nascita dell’istituto Kodokan: Luogo per la ricerca della Via, e il 1922 (quando dichiarato completo nei suoi fini e nei suoi mezzi il judo venne presentato all’imperatore)
-    Basterebbero queste poche righe per introdurre il judo del fondatore, ma dobbiamo aggiungere:
-        che il signor Kano non si raffigura come maestro imbattibile di un’arte marziale, ma come un judoka che ha realizzato la sua personalità da giovane per metterla al servizio del Paese e per offrire il suo prodotto culturale al mondo intero;
-        che l’applicazione di un paradigma educativo alla formazione dei giovani, affidato alla scuola (in Giappone) è fallita per l’ingerenza dei militari, che hanno usato la scuola, l’educazione e lo sport a scopi sciovinisti e per esaltare la guerra;
-        che questa situazione ha cancellato in maniera dirompente la proposta educativa del judo, favorendone la trasformazione in sport mondiale;
-        che il ju-sport differisce dal judo in ogni aspetto della pratica: l’allenamento, l’esercizio libero, quello di Forma, i rapporti fra praticanti e verso gli altri.
-    Buona lettura!`,
+      Basterebbero queste poche righe per introdurre il judo del fondatore, ma dobbiamo aggiungere:
+          che il signor Kano non si raffigura come maestro imbattibile di un’arte marziale, ma come un judoka che ha realizzato la sua personalità da giovane per metterla al servizio del Paese e per offrire il suo prodotto culturale al mondo intero;
+          che l’applicazione di un paradigma educativo alla formazione dei giovani, affidato alla scuola (in Giappone) è fallita per l’ingerenza dei militari, che hanno usato la scuola, l’educazione e lo sport a scopi sciovinisti e per esaltare la guerra;
+          che questa situazione ha cancellato in maniera dirompente la proposta educativa del judo, favorendone la trasformazione in sport mondiale;
+          che il ju-sport differisce dal judo in ogni aspetto della pratica: l’allenamento, l’esercizio libero, quello di Forma, i rapporti fra praticanti e verso gli altri.
+      Buona lettura!`,
     links: [
       {
         title: 'Scritti del fondatore',
@@ -161,7 +163,191 @@ export const pageData = {
       },
     ],
   },
-};
+  {
+    slug: 'judo-educazione/scritti-fondatore',
+    pageTitle: 'Scritti del fondatore',
+    pageImage: { src: import('~/assets/images/scritti-fondatore.jpg'), alt: 'scritti del fondatore' },
+    articles: [
+      {
+        title: 'Il contributo del judo all’Educazione di Kano Jigoro (translation with original speech)',
+        href: '/pdf/conferenza-di-los-angeles.pdf',
+        image: { src: import('~/assets/images/thumbnails/kanolosangeles-150x150.jpg'), alt: 'contributo educazione' },
+      },
+      {
+        title: 'Cos’è il Kodokan judo, di Kano Jigoro',
+        href: '/pdf/Cose-il-kodokan-judo.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/vecchio_kodokan-150x150.jpg'),
+          alt: 'vecchio_kodokan-150x150',
+        },
+      },
+      {
+        title: 'Sull’insegnamento del Bojutsu, di Kano Jigoro',
+        href: '/pdf/bojutsu.pdf',
+        image: { src: import('~/assets/images/thumbnails/bojutsu-146x150.gif'), alt: 'bojutsu-146x150' },
+      },
+    ],
+  },
+  {
+    slug: 'judo-educazione/tecnica',
+    pageTitle: 'Tecnica',
+    pageImage: { src: import('~/assets/images/tecnica.jpg'), alt: 'tecnica' },
+    articles: [
+      {
+        title: 'Le kei del metodo Oda',
+        href: '/pdf/Le-Kei-del-metodo-Oda.pdf',
+        image: { src: import('~/assets/images/thumbnails/keioda-150x150.png'), alt: 'kei metodo oda' },
+      },
+      {
+        title: 'Go, chowa e yawara',
+        href: '/pdf/gochowa-e-yawara.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/Jigoro_Kano_and_Kyuzo_Mifune-150x150.jpg'),
+          alt: 'kano jigoro e kyuzo mifune',
+        },
+      },
+      {
+        title: 'Libretto del Sig. Koizumi',
+        href: '/pdf/libretto-koizumi.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/koizumi-150x150.png'),
+          alt: 'koizumi',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'judo-educazione/didattica',
+    pageTitle: 'Didattica',
+    pageImage: { src: import('~/assets/images/didattica.jpg'), alt: 'didattica' },
+    articles: [
+      {
+        title: 'Brevi riflessioni sul drop out',
+        href: '/pdf/Brevi-riflessioni-sul-drop-out.pdf',
+        image: { src: import('~/assets/images/thumbnails/dropout-150x150.jpg'), alt: 'dropout' },
+      },
+      {
+        title: 'Il corso Elementare, il Corso-base e lo Sviluppo dello Speciale',
+        href: '/pdf/corso-elementare.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/corsoelementare-150x150.png'),
+          alt: 'corso elementare',
+        },
+      },
+      {
+        title: 'Randori secondo Kano Jigoro',
+        href: '/pdf/randori-secondo-kano.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/randori-150x150.png'),
+          alt: 'randori',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'judo-educazione/ricerche-educazione',
+    pageTitle: "Ricerche sull'Educazione",
+    pageImage: { src: import('~/assets/images/ricerche-educazione.jpg'), alt: 'ricerche educazione' },
+    articles: [
+      {
+        title: 'Una ricerca sulle amazzoni',
+        href: '/pdf/una-ricerca-sulle-amazzoni1.pdf',
+        image: { src: import('~/assets/images/thumbnails/Amazons-150x150.jpg'), alt: 'Amazons' },
+      },
+      {
+        title: 'Il funzionamento morale: pensiero e cognizione',
+        href: '/pdf/il-funzionamento-morale-pensiero-e-cognizione.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/child-development-150x150.jpg'),
+          alt: 'child-development',
+        },
+      },
+      {
+        title: 'Potenzialità e capacità della razza umana',
+        href: '/pdf/potenzialita-e-capacita-della-razza-umana.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/iris-150x150.jpg'),
+          alt: 'iris',
+        },
+      },
+      {
+        title: 'Erich Neumann: storia delle origini della coscienza',
+        href: '/pdf/neuman.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/neumann-150x150.jpg'),
+          alt: 'neumann',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'judo-educazione/storia',
+    pageTitle: 'Storia e personaggi del judo',
+    pageImage: { src: import('~/assets/images/storiaepersonaggi.jpg'), alt: 'Storia e personaggi' },
+    articles: [
+      {
+        title: 'Documenti sul Sig. Abbe',
+        href: '/pdf/kenshiro-abbe1.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/Kenshiro-Abbe-Cesare-Barioli-150x150.jpg'),
+          alt: 'abbe barioli',
+        },
+      },
+      {
+        title: '4 magnifici signori del judo',
+        href: '/pdf/i-4-magnifici.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/4magnifici-150x150.png'),
+          alt: '4 magnifici',
+        },
+      },
+      {
+        title: ' Moshe Feldenkrais',
+        href: '/pdf/feldenkrais.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/Moshe_talk-150x150.jpg'),
+          alt: 'moshe feldenkrais',
+        },
+      },
+      {
+        title: 'Ushijima Tatsukuma',
+        href: '/pdf/Ushijima.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/Tatsukuma_Ushijima-150x150.jpg'),
+          alt: 'ushijima',
+        },
+      },
+    ],
+  },
+  // {
+  //   slug: '',
+  //   pageTitle: '',
+  //   pageImage: { src: import('~/assets/images/'), alt: '' },
+  //   articles: [
+  //     {
+  //       title: '',
+  //       href: '/pdf/',
+  //       image: { src: import('~/assets/images/thumbnails/'), alt: '' },
+  //     },
+  //     {
+  //       title: '',
+  //       href: '/pdf/',
+  //       image: {
+  //         src: import('~/assets/images/thumbnails/'),
+  //         alt: '',
+  //       },
+  //     },
+  //     {
+  //       title: '',
+  //       href: '/pdf/',
+  //       image: {
+  //         src: import('~/assets/images/thumbnails/'),
+  //         alt: '',
+  //       },
+  //     },
+  //   ],
+  // },
+];
 
 export const footerData = {
   links: [

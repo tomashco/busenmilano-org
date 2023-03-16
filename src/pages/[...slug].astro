@@ -1,0 +1,51 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import { pageData } from '~/data';
+import { MetaSEO } from '~/types';
+
+interface articleProps {
+  title: string;
+  href: string | any;
+  image: {
+    src: string | any;
+    alt: string;
+  };
+}
+
+interface pageProps {
+  meta?: MetaSEO;
+  slug: string;
+  pageTitle: string;
+  pageDescription?: string;
+  pageImage?: string | any;
+  links?: { title: string; href: string }[];
+  articles?: articleProps[];
+}
+
+export async function getStaticPaths() {
+  const pages = pageData;
+  return pages.map(({ slug, pageTitle, pageImage, pageDescription, articles, links }: pageProps) => {
+    return {
+      params: { slug },
+      props: { pageTitle, pageImage, pageDescription, articles, links },
+    };
+  });
+}
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+
+const {
+  pageTitle = '',
+  pageImage = { src: '', alt: '' },
+  pageDescription = '',
+  articles = [],
+  links = [],
+} = Astro.props;
+---
+
+<Layout {...{ pageTitle, pageImage, pageDescription, articles, links }} {meta} />

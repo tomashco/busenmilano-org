@@ -8,14 +8,6 @@ import { headerData, footerData } from '~/data';
 import { MetaSEO } from '~/types';
 import { Picture } from '@astrojs/image/components';
 
-export interface Props {
-  meta?: MetaSEO;
-  pageTitle: string;
-  pageDescription: string;
-  pageImage?: string | any;
-  links?: { title: string; href: string }[];
-}
-
 interface articleProps {
   title: string;
   href: string | any;
@@ -24,15 +16,26 @@ interface articleProps {
     alt: string;
   };
 }
+export interface Props {
+  meta?: MetaSEO;
+  pageTitle: string;
+  pageDescription?: string;
+  articles?: articleProps[];
+  pageImage?: string | any;
+
+  links?: { title: string; href: string }[];
+}
 
 const {
   meta,
   pageTitle,
   pageImage = await Astro.slots.render('image'),
   pageDescription,
-  articles = await Astro.slots.render('articles'),
-  links = await Astro.slots.render('links'),
+  articles = [],
+  links,
 } = Astro.props;
+
+const { slug } = Astro.params;
 ---
 
 <Layout {meta}>
@@ -64,7 +67,7 @@ const {
             <ul />
             {links.map(({ title, href }) => (
               <li>
-                <a href={href}>{title}</a>
+                <a href={slug + href}>{title}</a>
               </li>
             ))}
           </slot>
