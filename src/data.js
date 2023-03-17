@@ -352,24 +352,399 @@ const video = [
           alt: 'congresso 2012',
         },
       },
+      {
+        title: 'Congresso 2011 “Un paradigma per l’educazione, il contributo del judo”',
+        href: SITE.basePathname + '/video/congressi/congresso-2011/',
+        image: {
+          src: import('~/assets/images/thumbnails/congresso2011-150x150.png'),
+          alt: 'congresso 2011',
+        },
+      },
+      {
+        title: 'Congresso 2011 “judo adattato e integrazione”',
+        href: SITE.basePathname + '/video/congressi/congresso-2011-adattato/',
+        image: {
+          src: import('~/assets/images/thumbnails/concetta-150x150.png'),
+          alt: 'congresso 2011 adattato',
+        },
+      },
+      {
+        title: 'Congresso 2010 “Educazione e Sport, il caso del judo”',
+        href: SITE.basePathname + '/video/congressi/congresso-2010/',
+        image: {
+          src: import('~/assets/images/thumbnails/congresso2010-150x150.png'),
+          alt: 'congresso 2010',
+        },
+      },
+      {
+        title: 'Congressi 2006-2007 “il judo e i suoi kata”',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/',
+        image: {
+          src: import('~/assets/images/thumbnails/cesare2007-150x150.png'),
+          alt: 'congressi 2006 2007',
+        },
+      },
     ],
   },
   {
     slug: 'video/congressi/congresso-2012',
-    pageTitle: 'Congresso 2012',
+    pageTitle: 'Congresso 2012 “Judo, una Prospettiva sull’Educazione”',
     pageDescription:
       '<p>Congresso Internazionale Vercelli 19, 20, 21 Ottobre 2012</p></br><iframe width="560" height="315" src="https://www.youtube.com/embed/aqs9bC4DAlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    slug: 'video/congressi/congresso-2011',
+    pageTitle: 'Congresso 2011 “Un paradigma per l’educazione, il contributo del judo”',
+    pageDescription:
+      '<p>L’<a href="http://www.sport-educazione.it/">A.I.S.E.</a> ritiene che l’Educazione si trovi oggi nel periodo pre-paradigmatico, caratterizzato dall’esistenza di molte scuole e dall’assenza di un sistema di principi condivisi (vedi: Thomas Kuhn, <em>La Struttura delle Rivoluzioni Scientifiche,</em> 1985).</p><p><span id="more-67"></span></p><p>L’argomento permette di analizzare il pensiero di Jigoro Kano che proponeva il judo come pratica educativa: <em>“L’Occidente ci ha dato tutto e questo un giorno potrebbe esserci rinfacciato. Cosa può dare il Giappone alla civiltà planetaria? l’idea di Educazione”.</em></p><p>Il Congresso vuole discutere questo argomento e proporre l’istituzione di una laurea-breve in judo-educazione, per offrire un’alternativa alla concezione sportiva.</p><p><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=yFny8Xj-F9o">link to the english video</a></p><p><iframe src="http://www.youtube.com/embed/faAyAskpu-0?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Congresso 2011 “judo adattato e integrazione”',
+    slug: 'video/congressi/congresso-2011-adattato',
+    pageDescription:
+      '<p>“A vent’anni dal primo congresso organizzato a Varallo Pombia, l’Aise tira le somme di quanto abbiamo fatto.</p><p><span id="more-62"></span></p><p>Poco. Ma sopratutto abbiamo incontrato difficoltà a rapportarci con l’estero (le nazioni europee), dove è proseguito il programma campionistico di modello Paralimpico.<br>Dobbiamo decidere quanto ci impegnamo.<br>Il primo week-end di questo progetto congressuale, sponsorizzato dal Ministero del Sociale, ha visto la partecipazione di un centinaio di disabili, che hanno gareggiato con gli ‘abili’, e si sono esibiti in lezione. Ora contiamo di avere altrettanto successo con gli operatori del settore, con medici, psicologi e autorità.<br>Ci permettiamo di invitare tutti a dare una mano, se non altro a decidere se il judo-adattato serve all’integrazione, o meno”</p><p>Twenty years after the first congress held in Varallo Pombia, AISE sums up what it did.<br>Not too much. But above all we have faced difficulties in relations with other countries (European nations), where the champion-program based on the Paralympics Model is pursued.<br>We have to decide how much we want to commit.<br>The first weekend of this conference’s project, sponsored by the Ministry of Social Welfare, was attended by hundreds of special needs people, who competed with “able” people; they also performed in teaching lessons. Now we expect to have a similar success with specialists of this field, with doctors, psychologists and authorities.<br>We would like to invite everyone to help out, even only to decide whether adapted judo is helpful for the integration or not.</p><p><iframe src="http://player.vimeo.com/video/63047764" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="500" height="375" frameborder="0"></iframe> </p><p><a href="http://vimeo.com/63047764">Judo adattato</a> from <a href="http://vimeo.com/user10846993">Bu-sen Milano</a> on <a href="http://vimeo.com">Vimeo</a>.</p>',
+  },
+  {
+    pageTitle: 'Congresso 2010 “Educazione e Sport, il caso del judo”',
+    slug: 'video/congressi/congresso-2010',
+    pageDescription:
+      '<p>L’A.I.S.E. (Ass. It. Sport-Educazione) e l’Università del Piemonte Orientale hanno organizzato in Ottobre 2010 a Vercelli il Congresso “Educazione e Sport, il caso del judo” per celebrare il 150° anniversario della nascita del Fondatore del judo</p><p><span id="more-58"></span></p><p>Erano presenti 180 judoisti di tre continenti, giunti da Giappone, U.S.A., Spagna, Francia, Belgio, Germania. In particolare c’era Ayumi Tanimoto, vincitrice dell’oro ad Atene e a Beijing, che ha fatto lezione di randori.<br>La signora Tanimoto, che ha iniziato il judo in una scuola tradizionale, ha spiegato il punto di vista di molte Associazioni nipponiche: che se si manda il ragazzo in gara per vincere a tutti i costi questo ragazzo ha perso per sempre i benefici del judo. In gara si va, dopo aver imparato la tecnica, a cercare la bellezza del gesto che si riflette nell’ippon ‘magistrale’. In Giappone l’uomo della strada è ancora interessato alla medaglia, ma nell’ambiente del judo si mira a una qualifica più nobile, quella di disciplina educativa.</p><p>Questo avvenimento ci ha permesso di stringere rapporti con professori stranieri e con l’Università di Tsukuba e quindi di proporre tre giorni di discussione e di amicizia sul judo-educazione nella festività di Pasqua, a Villa Salta di Predappio Alta.</p><p>Il testo da cui partiamo a discutere con insegnanti e giornalisti stranieri la questione del judo-educazione, proposto dal sottoscritto, è scaricabile <a href="http://www.busenmilano.org/wp-content/uploads/2012/11/Il-judo-non-è-sport-Capitolo-Primo.pdf">qui</a>, cliccando col tasto destro del mouse e selezionando “salva link con nome”</p><p><iframe src="http://www.youtube.com/embed/H-e_QF3vn9w?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Congressi 2006-2007 “il judo e i suoi kata”',
+    slug: 'video/congressi/congresso-2006-2007',
+    articles: [
+      {
+        title: 'Kyto-ryu',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/kyto-ryu',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/vismara-150x150.png'),
+          alt: 'kito ryu',
+        },
+      },
+      {
+        title: 'Analogie tra Nage e Itsutsu-no-kata',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/nage-itsutsu',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/tesini2-150x150.png'),
+          alt: 'nage itsutsu',
+        },
+      },
+      {
+        title: 'Muyoshi nel Koshiki-no-kata',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/muyoshi-koshiki',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/lisi-150x150.png'),
+          alt: 'muyoshi koshiki',
+        },
+      },
+      {
+        title: 'Attraverso il tempo e i continenti i kata…',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/continenti-kata',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/gaio-150x150.png'),
+          alt: 'continenti kata',
+        },
+      },
+      {
+        title: 'Shu-ha-ri',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/shu-ha-ri',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/bandini-150x150.png'),
+          alt: 'shi ha ri',
+        },
+      },
+      {
+        title: 'Studio su Ju-no-kata',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/studio-ju-no-kata',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/cesare2007-150x150.png'),
+          alt: 'ju no kata',
+        },
+      },
+      {
+        title: 'Una proposta da Kime e Nage-no-kata',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/kime-nage',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/maiaso2007-150x150.png'),
+          alt: 'kime nage',
+        },
+      },
+      {
+        title: 'Itsutsu-no-kata e lo stile di espressione',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/itsutsu-no-kata',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/francescaAntonino-150x150.png'),
+          alt: 'itsutsu no kata',
+        },
+      },
+      {
+        title: 'Ju-no-kata e corso di randori del sig. Kano',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/randori-ju-no-kata',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/tesini-150x150.png'),
+          alt: 'ju no kata',
+        },
+      },
+      {
+        title: 'L’utilizzo del Kime-no-kata per la decisione',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/decisione-kime-no-kata',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/maiaso-150x150.png'),
+          alt: 'decisione kime no kata',
+        },
+      },
+      {
+        title: 'Studio su Nage-no-kata',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/studio-ju-no-kata',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/BarioliNage-150x150.png'),
+          alt: 'studio ju no kata',
+        },
+      },
+      {
+        title: 'Il Sei-ryoku del maestro Nagaoka',
+        href: SITE.basePathname + '/video/congressi/congresso-2006-2007/studio-sei-ryoku',
+        image: {
+          src: import('~/assets/images/thumbnails/congressiKata/pelligra1-150x150.png'),
+          alt: 'studio sei ryoku',
+        },
+      },
+    ],
+  },
+  {
+    pageTitle: 'Kyto-ryu',
+    slug: 'video/congressi/congresso-2006-2007/kyto-ryu',
+    pageDescription:
+      '<div class="entry-content"><p>Congresso “Il judo e i suoi kata”, Solferino 2007</p><p>Intervento di Alfredo Vismara<span id="more-55"></span></p><p><iframe src="http://www.youtube.com/embed/cC-sKnr8iZU?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/_lpNYgQ6QDo?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/UNhSb828vio?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/41g8RX07Xo0?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/5XWNFI6UqaA?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Analogie tra Nage e Itsutsu-no-kata',
+    slug: 'video/congressi/congresso-2006-2007/nage-itsutsu',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2007</p><p>Intervento di Pino Tesini<span id="more-51"></span></p><p><iframe src="http://www.youtube.com/embed/xiTKshmJx4g?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/XIRCX2En5Bg?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/p6dvo16e3kM?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/PftlCZAVKWc?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0">',
+  },
+  {
+    pageTitle: 'Muyoshi nel Koshiki-no-kata',
+    slug: 'video/congressi/congresso-2006-2007/muyoshi-koshiki',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2007</p><p>Intervento di Alessio Lisi<span id="more-48"></span></p><p><iframe src="http://www.youtube.com/embed/e0CcIEO8PPs?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/SBggmAAXnkM?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/XZ8IAkRhLlM?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/ivYc9jlY7F8?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0">',
+  },
+  {
+    pageTitle: 'Attraverso il tempo e i continenti i kata…',
+    slug: 'video/congressi/congresso-2006-2007/continenti-kata',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2007</p><p>Intervento di Ivana Gaio<span id="more-45"></span></p><p><iframe src="http://www.youtube.com/embed/pgCQP-kNg-w?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/i3DgJO9zZvI?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/qhgLhNFRkMw?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0">',
+  },
+  {
+    pageTitle: 'Shu-ha-ri',
+    slug: 'video/congressi/congresso-2006-2007/shu-ha-ri',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2007</p><p>Intervento di Stefania Bandini<span id="more-42"></span></p><p><iframe src="http://www.youtube.com/embed/5fk0vGfqSaw?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/IOjbX5nP4AI?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/cuhBiBN_lno?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/KcBMERVocg0?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/urxfG4ezXl4?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/DLRnbEmN6ss?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0">',
+  },
+  {
+    pageTitle: 'Studio su Ju-no-kata',
+    slug: 'video/congressi/congresso-2006-2007/studio-ju-no-kata',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2007</p><p>Intervento di Cesare Barioli<span id="more-39"></span></p><p><iframe src="http://www.youtube.com/embed/xEO3HNQcTT4?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/Ats5VTNE0Ac?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/bBDkGXhwUOk?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/hdmRjX3D-Qc?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/pM9iieLgIIg?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Una proposta da Kime e Nage-no-kata',
+    slug: 'video/congressi/congresso-2006-2007/kime-nage',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2007</p><p>Intervento di Stefano Maiaso<span id="more-36"></span></p><p><iframe src="http://www.youtube.com/embed/CQwaIyCt9xI?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/dAMs1jMWnDE?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/rjvkoqqTsbI?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Itsutsu-no-kata e lo stile di espressione',
+    slug: 'video/congressi/congresso-2006-2007/itsutsu-no-kata',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2006</p><p>Intervento di Francesca Antonino<span id="more-33"></span></p><p><iframe src="http://www.youtube.com/embed/OCJxUr2Adu4?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/K6zVu_FbERo?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/TGWG94D3Qt8?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Ju-no-kata e corso di randori del sig. Kano',
+    slug: 'video/congressi/congresso-2006-2007/randori-ju-no-kata',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2006</p><p>Intervento di Pino Tesini<span id="more-30"></span></p><p><iframe src="http://www.youtube.com/embed/K0xY8pAKmYc?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/GmnyrmeJw-I?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/y9L2enwUWvQ?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/ustmlHU7u2Q?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/Agwhw-z2BKw?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'L’utilizzo del Kime-no-kata per la decisione',
+    slug: 'video/congressi/congresso-2006-2007/decisione-kime-no-kata',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2006</p><p>Intervento di Stefano Maiaso<span id="more-27"></span></p><p><iframe src="http://www.youtube.com/embed/x9bhJx-fkgM?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/68Thjl4xqnk?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/rGO35zz9tzg?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/Gq-boNnPIcg?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/4qFAd2P912U?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Studio su Nage-no-kata',
+    slug: 'video/congressi/congresso-2006-2007/studio-ju-no-kata',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2006</p><p>Intervento di Cesare Barioli<span id="more-24"></span></p><p><iframe src="http://www.youtube.com/embed/3_nYZGSFIXc?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/8xSYmuWJMpI?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/N5dg2WwL8Rw?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/3ty-7Hlx1-I?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/BkTP4pTCsUc?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+  },
+  {
+    pageTitle: 'Il Sei-ryoku del maestro Nagaoka',
+    slug: 'video/congressi/congresso-2006-2007/studio-sei-ryoku',
+    pageDescription:
+      '<p>Congresso “Il judo e i suoi kata”, Solferino 2006</p><p>Intervento di Maurizio Pelligra<span id="more-20"></span></p><p><iframe src="http://www.youtube.com/embed/ZucxA6RAd_c?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/y5Hxb6XxIcs?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/Jv8UE6htzZM?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
   },
   {
     slug: 'video/judo',
     pageTitle: 'Judo',
     articles: [
-      // {
-      //   title: '',
-      //   href: '/pdf/',
-      //   image: { src: import('~/assets/images/thumbnails/'), alt: '' },
-      // },
+      {
+        title: 'Shin Jin Ichinyo',
+        href: SITE.basePathname + '/video/judo/shin-jin-ichinyo',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/shinjinichinyo-150x150.png'),
+          alt: 'shin-jin-ichinyo',
+        },
+      },
+      {
+        title: 'Metodo di Allenamento, di Abbe kenshiro',
+        href: SITE.basePathname + '/video/judo/metodo-abbe',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/abbe_allenamento.mov.ff_thumb0-150x150.jpg'),
+          alt: 'abbe kenshiro',
+        },
+      },
+      {
+        title: 'La tecnica di Tokio Hirano',
+        href: SITE.basePathname + '/video/judo/tokyo-hirano',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/tokyo_hirano-150x150.jpg'),
+          alt: 'tokyo hirano',
+        },
+      },
+      {
+        title: 'Uso del Kime-no-kata, di Stefano Maiaso',
+        href: SITE.basePathname + '/video/judo/uso-kime',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/tsukkake-idori-150x150.jpg'),
+          alt: 'tokyo hirano',
+        },
+      },
+      {
+        title: 'Koshiki no kata - world championship training',
+        href: SITE.basePathname + '/video/judo/koshiki-championship',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/koshiki-worldchampionshiptrainer-150x150.png'),
+          alt: 'koshiki championship',
+        },
+      },
+      {
+        title: 'Nage-no-kata e Koshiki-no-kata di Yamashita Yoshiaki con la biografia e un enigma',
+        href: SITE.basePathname + '/video/judo/nage-koshiki',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/YoshiakiYamashita-150x150.jpg'),
+          alt: 'nage koshiki',
+        },
+      },
+      {
+        title: 'Nage-no-kata e biografia di Nagaoka Hidekatsu',
+        href: SITE.basePathname + '/video/judo/nage-nagaoka',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/nagaoka-nagenokata-150x150.png'),
+          alt: 'nage nagaoka',
+        },
+      },
+      {
+        title: 'Ju-no-kata di Kano Jigoro, foto',
+        href: SITE.basePathname + '/video/judo/junokata-kano',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/kano-junokata-150x150.png'),
+          alt: 'junokata kano',
+        },
+      },
+      {
+        title: 'Ju-no-kata di Isogai Hajime',
+        href: SITE.basePathname + '/video/judo/junokata-isogai',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/ju-no-kata-150x150.png'),
+          alt: 'junokata isogai',
+        },
+      },
+      {
+        title: 'Randori davanti all’imperatore – 1922Ju-no-kata di Isogai Hajime',
+        href: SITE.basePathname + '/video/judo/randori-imperatore',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/Randori_1922-150x150.jpg'),
+          alt: 'randori imperatore',
+        },
+      },
+      {
+        title: 'La tecnica di Kyuzo Mifune genio del judo',
+        href: SITE.basePathname + '/video/judo/tecnica-mifune',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/mifune-150x150.png'),
+          alt: 'tecnica mifune',
+        },
+      },
+      {
+        title: 'Kime-shiki di Nagaoka Hidekazu (1876-1952) e Samura Kaichiro (1880-1964)',
+        href: SITE.basePathname + '/video/judo/kime-nagaoka-samura',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/kime_shiki-150x150.jpg'),
+          alt: 'kime nagaoka samura',
+        },
+      },
+      {
+        title: 'Lezione di roppo-no-kuzushi di Kano Jigoro',
+        href: SITE.basePathname + '/video/judo/roppo-no-kuzushi',
+        image: {
+          src: import('~/assets/images/thumbnails/videoJudo/kano_ukigoshi-150x150.jpg'),
+          alt: 'roppo no kuzushi',
+        },
+      },
     ],
+  },
+  {
+    pageTitle: 'Shin Jin Ichinyo',
+    slug: 'video/judo/shin-jin-ichinyo',
+  },
+  {
+    pageTitle: 'Metodo di Allenamento, di Abbe kenshiro',
+    slug: 'video/judo/metodo-abbe',
+  },
+  {
+    pageTitle: 'La tecnica di Tokio Hirano',
+    slug: 'video/judo/tokyo-hirano',
+  },
+  {
+    pageTitle: 'Uso del Kime-no-kata, di Stefano Maiaso',
+    slug: 'video/judo/uso-kime',
+  },
+  {
+    pageTitle: 'Koshiki no kata - world championship training',
+    slug: 'video/judo/koshiki-championship',
+  },
+  {
+    pageTitle: 'Nage-no-kata e Koshiki-no-kata di Yamashita Yoshiaki con la biografia e un enigma',
+    slug: 'video/judo/nage-koshiki',
+  },
+  {
+    pageTitle: 'Nage-no-kata e biografia di Nagaoka Hidekatsu',
+    slug: 'video/judo/nage-nagaoka',
+  },
+  {
+    pageTitle: 'Ju-no-kata di Kano Jigoro, foto',
+    slug: 'video/judo/junokata-kano',
+  },
+  {
+    pageTitle: 'Ju-no-kata di Isogai Hajime',
+    slug: 'video/judo/junokata-isogai',
+  },
+  {
+    pageTitle: 'Randori davanti all’imperatore – 1922Ju-no-kata di Isogai Hajime',
+    slug: 'video/judo/randori-imperatore',
+  },
+  {
+    pageTitle: 'La tecnica di Kyuzo Mifune genio del judo',
+    slug: 'video/judo/tecnica-mifune',
+  },
+  {
+    pageTitle: 'Kime-shiki di Nagaoka Hidekazu (1876-1952) e Samura Kaichiro (1880-1964)',
+    slug: 'video/judo/kime-nagaoka-samura',
+  },
+  {
+    pageTitle: 'Lezione di roppo-no-kuzushi di Kano Jigoro',
+    slug: 'video/judo/roppo-no-kuzushi',
   },
 ];
 
