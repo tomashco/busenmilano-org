@@ -38,11 +38,11 @@ export const headerData = {
       links: [
         {
           text: 'Congressi',
-          href: '/video-congressi',
+          href: '/congressi',
         },
         {
           text: 'Judo',
-          href: '/video-judo',
+          href: '/judo',
         },
       ],
     },
@@ -79,28 +79,28 @@ export const headerData = {
   ],
 };
 
-export const pageData = [
+const busenMilano = [
   {
     slug: 'busen-milano',
     pageTitle: 'Bu-Sen Milano',
     pageImage: { src: import('~/assets/images/busen-milano.jpg'), alt: 'busen-milano' },
     pageDescription: `<p class="pb-6">La storia del Bu-sen di Milano è legata alla vita di Cesare Barioli, che iniziò a far judo quando in
-    Italia non si conosceva ancora molto di questa disciplina. Era il 1966 quando quel vecchio teatro milanese
-    di via Arese 7 fu trasformato in un dojo: tecnica, keiko, randori, gare, passione e sudore fanno il nome
-    del Bu-sen di Milano. Una scuola che ha visto campioni, riconosciuti a livello internazionale e che ha
-    creato maestri, tuttora attivi nel mondo del judo, contemporaneamente si forma un ambiente culturale in
-    grado di favorire lo sviluppo, in Italia, di altre attività legate alla cultura orientale e non solo. Nel
-    1986 Cesare Barioli si reca in Giappone e al suo ritorno, porta con sé gli scritti originali del
-    fondatore: il prof. Kano Jigoro. Si occupa personalmente della traduzione e pubblica “Judo Kyohon –
-    Fondamenti del judo”. La prima edizione: “Quaderni del Bu-sen N°3” esce come supplemento al N° 31 della
-    rivista “Kyu shin do”. L’attività promossa dal Bu-sen è un susseguirsi di Stage, di Corsi di Formazione
-    per insegnanti, pubblicazioni, traduzioni, ricerche ed anche lo sviluppo del judo adattato. Nel 2000 la
-    sede storica viene messa in vendita. L’Associazione prosegue l’attività, prima presso la palestra di una
-    scuola a Quarto Oggiaro, poi si trasferisce a Cinisello Balsamo dov’è tuttora attiva. A breve sarà pronta
-    la nuova sede, torneremo a Milano, e avrà le caratteristiche predisposte da Cesare Barioli. Chiediamo
-    scusa per questa pallida presentazione, ma abbiamo scelto di non raccontare ed offrire, invece, al lettore
-    la possibilità di ricostruire un po’ di “storia” attraverso i testi, articoli, foto e racconti che potrà
-    leggere, di volta in volta, su queste pagine. Per info e chiarimenti scrivere a: <a class="hover:text-[#cf2e2e] text-blue-700 underline" href="mailto:infobusenmilano@gmail.com">infobusenmilano@gmail.com</p>`,
+  Italia non si conosceva ancora molto di questa disciplina. Era il 1966 quando quel vecchio teatro milanese
+  di via Arese 7 fu trasformato in un dojo: tecnica, keiko, randori, gare, passione e sudore fanno il nome
+  del Bu-sen di Milano. Una scuola che ha visto campioni, riconosciuti a livello internazionale e che ha
+  creato maestri, tuttora attivi nel mondo del judo, contemporaneamente si forma un ambiente culturale in
+  grado di favorire lo sviluppo, in Italia, di altre attività legate alla cultura orientale e non solo. Nel
+  1986 Cesare Barioli si reca in Giappone e al suo ritorno, porta con sé gli scritti originali del
+  fondatore: il prof. Kano Jigoro. Si occupa personalmente della traduzione e pubblica “Judo Kyohon –
+  Fondamenti del judo”. La prima edizione: “Quaderni del Bu-sen N°3” esce come supplemento al N° 31 della
+  rivista “Kyu shin do”. L’attività promossa dal Bu-sen è un susseguirsi di Stage, di Corsi di Formazione
+  per insegnanti, pubblicazioni, traduzioni, ricerche ed anche lo sviluppo del judo adattato. Nel 2000 la
+  sede storica viene messa in vendita. L’Associazione prosegue l’attività, prima presso la palestra di una
+  scuola a Quarto Oggiaro, poi si trasferisce a Cinisello Balsamo dov’è tuttora attiva. A breve sarà pronta
+  la nuova sede, torneremo a Milano, e avrà le caratteristiche predisposte da Cesare Barioli. Chiediamo
+  scusa per questa pallida presentazione, ma abbiamo scelto di non raccontare ed offrire, invece, al lettore
+  la possibilità di ricostruire un po’ di “storia” attraverso i testi, articoli, foto e racconti che potrà
+  leggere, di volta in volta, su queste pagine. Per info e chiarimenti scrivere a: <a class="hover:text-[#cf2e2e] text-blue-700 underline" href="mailto:infobusenmilano@gmail.com">infobusenmilano@gmail.com</p>`,
     articles: [
       {
         title: 'La necessità di una filosofia',
@@ -129,17 +129,20 @@ export const pageData = [
       },
     ],
   },
+];
+
+const judoEducazione = [
   {
     slug: 'judo-educazione',
     pageTitle: 'Judo Educazione',
     pageImage: { src: import('~/assets/images/judo-educazione.jpg'), alt: 'judo-educazione' },
     pageDescription: `<p class="pb-6">La parola “judo”, che traduciamo Via dell’adattabilità esprime una disciplina formativa a beneficio dei giovani, formulata dal signor Jigoro Kano (1860-1938) tra il 1882, data di nascita dell’istituto Kodokan: Luogo per la ricerca della Via, e il 1922 (quando dichiarato completo nei suoi fini e nei suoi mezzi il judo venne presentato all’imperatore)
-      Basterebbero queste poche righe per introdurre il judo del fondatore, ma dobbiamo aggiungere:
-          che il signor Kano non si raffigura come maestro imbattibile di un’arte marziale, ma come un judoka che ha realizzato la sua personalità da giovane per metterla al servizio del Paese e per offrire il suo prodotto culturale al mondo intero;
-          che l’applicazione di un paradigma educativo alla formazione dei giovani, affidato alla scuola (in Giappone) è fallita per l’ingerenza dei militari, che hanno usato la scuola, l’educazione e lo sport a scopi sciovinisti e per esaltare la guerra;
-          che questa situazione ha cancellato in maniera dirompente la proposta educativa del judo, favorendone la trasformazione in sport mondiale;
-          che il ju-sport differisce dal judo in ogni aspetto della pratica: l’allenamento, l’esercizio libero, quello di Forma, i rapporti fra praticanti e verso gli altri.
-      Buona lettura!`,
+    Basterebbero queste poche righe per introdurre il judo del fondatore, ma dobbiamo aggiungere:
+        che il signor Kano non si raffigura come maestro imbattibile di un’arte marziale, ma come un judoka che ha realizzato la sua personalità da giovane per metterla al servizio del Paese e per offrire il suo prodotto culturale al mondo intero;
+        che l’applicazione di un paradigma educativo alla formazione dei giovani, affidato alla scuola (in Giappone) è fallita per l’ingerenza dei militari, che hanno usato la scuola, l’educazione e lo sport a scopi sciovinisti e per esaltare la guerra;
+        che questa situazione ha cancellato in maniera dirompente la proposta educativa del judo, favorendone la trasformazione in sport mondiale;
+        che il ju-sport differisce dal judo in ogni aspetto della pratica: l’allenamento, l’esercizio libero, quello di Forma, i rapporti fra praticanti e verso gli altri.
+    Buona lettura!`,
     links: [
       {
         title: 'Scritti del fondatore',
@@ -319,32 +322,55 @@ export const pageData = [
       },
     ],
   },
-  // {
-  //   slug: '',
-  //   pageTitle: '',
-  //   pageImage: { src: import('~/assets/images/'), alt: '' },
-  //   articles: [
-  //     {
-  //       title: '',
-  //       href: '/pdf/',
-  //       image: { src: import('~/assets/images/thumbnails/'), alt: '' },
-  //     },
-  //     {
-  //       title: '',
-  //       href: '/pdf/',
-  //       image: {
-  //         src: import('~/assets/images/thumbnails/'),
-  //         alt: '',
-  //       },
-  //     },
-  //     {
-  //       title: '',
-  //       href: '/pdf/',
-  //       image: {
-  //         src: import('~/assets/images/thumbnails/'),
-  //         alt: '',
-  //       },
-  //     },
-  //   ],
-  // },
 ];
+
+const video = [
+  {
+    slug: 'video',
+    pageTitle: 'Video',
+    pageImage: { src: import('~/assets/images/video.jpg'), alt: 'video' },
+    links: [
+      {
+        title: 'Congressi',
+        href: '/congressi',
+      },
+      {
+        title: 'Judo',
+        href: '/judo',
+      },
+    ],
+  },
+  {
+    slug: 'video/congressi',
+    pageTitle: 'Congressi',
+    articles: [
+      {
+        title: 'Congresso 2012 “Judo, una Prospettiva sull’Educazione”',
+        href: SITE.basePathname + '/video/congressi/congresso-2012/',
+        image: {
+          src: import('~/assets/images/thumbnails/unaprospettivasulleducazione-150x150.png'),
+          alt: 'congresso 2012',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'video/congressi/congresso-2012',
+    pageTitle: 'Congresso 2012',
+    pageDescription:
+      '<p>Congresso Internazionale Vercelli 19, 20, 21 Ottobre 2012</p></br><iframe width="560" height="315" src="https://www.youtube.com/embed/aqs9bC4DAlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+  },
+  {
+    slug: 'video/judo',
+    pageTitle: 'Judo',
+    articles: [
+      // {
+      //   title: '',
+      //   href: '/pdf/',
+      //   image: { src: import('~/assets/images/thumbnails/'), alt: '' },
+      // },
+    ],
+  },
+];
+
+export const pageData = [...busenMilano, ...judoEducazione, ...video];

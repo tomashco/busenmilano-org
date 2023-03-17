@@ -7,6 +7,7 @@ import { SITE } from '~/config.mjs';
 
 import { MetaSEO } from '~/types';
 import { Picture } from '@astrojs/image/components';
+import { buildHref } from '~/utils/permalinks';
 
 interface articleProps {
   title: string;
@@ -41,16 +42,20 @@ const { slug } = Astro.params;
         {pageTitle && <h1 class="text-3xl py-6">{pageTitle}</h1>}
       </slot>
       <slot name="page-image">
-        <Picture
-          class="mx-auto pb-6 rounded-md"
-          widths={[400, 768, 1024, 2040]}
-          sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-          aspectRatio={730 / 370}
-          loading="eager"
-          width={730}
-          height={370}
-          {...pageImage}
-        />
+        {
+          pageImage && (
+            <Picture
+              class="mx-auto pb-6 rounded-md"
+              widths={[400, 768, 1024, 2040]}
+              sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+              aspectRatio={730 / 370}
+              loading="eager"
+              width={730}
+              height={370}
+              {...pageImage}
+            />
+          )
+        }
       </slot>
       <slot />
       {pageDescription && <slot set:html={pageDescription} name="page-description" />}
@@ -59,7 +64,7 @@ const { slug } = Astro.params;
           <ul>
             {links.map(({ title, href }) => (
               <li>
-                <a href={`${SITE.basePathname}/${slug}${href}`}>{title}</a>
+                <a href={buildHref(`${SITE.basePathname}/${slug}${href}`)}>{title}</a>
               </li>
             ))}
           </ul>
@@ -80,7 +85,7 @@ const { slug } = Astro.params;
                   height={150}
                   {...image}
                 />
-                <a class="px-6 pt-3 text-lg italic font-serif hover:text-[#cf2e2e]" href={href}>
+                <a class="px-6 pt-3 text-lg italic font-serif hover:text-[#cf2e2e]" href={buildHref(href)}>
                   {title}
                 </a>
               </li>
