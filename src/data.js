@@ -69,10 +69,6 @@ export const headerData = {
       ],
     },
     {
-      text: 'Appuntamenti',
-      href: SITE.basePathname + '/appuntamenti',
-    },
-    {
       text: 'Report',
       href: SITE.basePathname + '/report',
     },
@@ -126,6 +122,137 @@ const busenMilano = [
         title: 'Al nostro Maestro di judo e di vita',
         href: SITE.basePathname + '/pdf/Maestro-di-judo.pdf',
         image: { src: import('~/assets/images/thumbnails/maestro-judo.jpg'), alt: 'maestro judo' },
+      },
+    ],
+  },
+];
+
+const judoAdattato = [
+  {
+    slug: 'judo-adattato',
+    pageTitle: 'Judo Adattato',
+    pageImage: { src: import('~/assets/images/judo-adattato.jpg'), alt: 'judo adattato' },
+    articles: [
+      {
+        title: 'Teoria e terapia',
+        href: SITE.basePathname + '/pdf/teoria-e-terapia.pdf',
+        image: { src: import('~/assets/images/thumbnails/autismo-150x150.jpg'), alt: 'autismo' },
+      },
+      {
+        title: 'L’esperienza di un gruppo',
+        href: SITE.basePathname + '/pdf/Lesperienza-di-un-gruppo.pdf',
+        image: { src: import('~/assets/images/thumbnails/storiadiungruppo-300x300.jpg'), alt: 'storia gruppo' },
+      },
+      {
+        title: 'Profumo di judo, M° Claude Combe',
+        href: SITE.basePathname + '/pdf/profumo-di-judo.pdf',
+        image: { src: import('~/assets/images/thumbnails/claudeCombe-150x150.png'), alt: 'Claude Combe' },
+      },
+    ],
+  },
+];
+
+const report = [
+  {
+    slug: 'report',
+    pageTitle: 'Report',
+    pageImage: { src: import('~/assets/images/foto-report.jpg'), alt: 'report' },
+    articles: [
+      {
+        title: 'Keiko e Randori - 3 marzo 2013, Monza',
+        href: SITE.basePathname + '/pdf/Monza.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/549975_10200823509577055_1341486624_n-150x150.jpg'),
+          alt: 'keiko e randori',
+        },
+      },
+      {
+        title: 'Keiko e Randori - 17 febbraio 2013, Usmate Velate',
+        href: SITE.basePathname + '/pdf/usmate-17-febbraio-2013.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/602106_10200715753403218_1080633024_n-e1364392535786-300x300.jpg'),
+          alt: 'keiko e randori',
+        },
+      },
+    ],
+  },
+];
+
+const intornoAlDojo = [
+  {
+    slug: 'intorno-dojo',
+    pageTitle: 'Intorno al dojo',
+    pageImage: { src: import('~/assets/images/intorno-al-dojo.jpg'), alt: 'intorno al dojo' },
+    links: [
+      {
+        title: 'Go',
+        href: '/go',
+      },
+      {
+        title: 'Letture',
+        href: '/letture',
+      },
+      {
+        title: 'Tutorials',
+        href: '/tutorial',
+      },
+    ],
+  },
+  {
+    slug: 'intorno-dojo/go',
+    pageTitle: 'Go',
+    articles: [
+      {
+        title: 'Yasuda Sensei, 8° dan e professore di go',
+        href: SITE.basePathname + '/pdf/yasuda-go.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/yasudayasutoshi.gif'),
+          alt: 'congresso 2012',
+        },
+      },
+      {
+        title: 'Una sera a cena con Saijo Sensei',
+        href: SITE.basePathname + '/pdf/Saijo-sensei-go.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/saijomasataka.jpg'),
+          alt: 'congresso 2011',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'intorno-dojo/letture',
+    pageTitle: 'Letture',
+    articles: [
+      {
+        title: 'Storia di un sogno a Bizan',
+        href: SITE.basePathname + '/pdf/Storia-di-un-sogno-a-Bizan.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/storiadiunsogno-150x150.png'),
+          alt: 'Storia di un sogno',
+        },
+      },
+      {
+        title: 'La montagna gialla',
+        href: SITE.basePathname + '/pdf/La-Montagna-Gialla.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/lamontagnagialla-150x150.png'),
+          alt: 'la montagna gialla',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'intorno-dojo/tutorial',
+    pageTitle: 'Tutorials',
+    articles: [
+      {
+        title: 'Come costruire una Tsuba per Boken',
+        href: SITE.basePathname + '/pdf/Come-costruire-una-Tsuba-per-Boken.pdf',
+        image: {
+          src: import('~/assets/images/thumbnails/tsubabokken-150x150.png'),
+          alt: 'Tsuba bokken',
+        },
       },
     ],
   },
@@ -408,7 +535,7 @@ const video = [
     pageTitle: 'Congresso 2010 “Educazione e Sport, il caso del judo”',
     slug: 'video/congressi/congresso-2010',
     pageDescription:
-      '<p>L’A.I.S.E. (Ass. It. Sport-Educazione) e l’Università del Piemonte Orientale hanno organizzato in Ottobre 2010 a Vercelli il Congresso “Educazione e Sport, il caso del judo” per celebrare il 150° anniversario della nascita del Fondatore del judo</p><p><span id="more-58"></span></p><p>Erano presenti 180 judoisti di tre continenti, giunti da Giappone, U.S.A., Spagna, Francia, Belgio, Germania. In particolare c’era Ayumi Tanimoto, vincitrice dell’oro ad Atene e a Beijing, che ha fatto lezione di randori.<br>La signora Tanimoto, che ha iniziato il judo in una scuola tradizionale, ha spiegato il punto di vista di molte Associazioni nipponiche: che se si manda il ragazzo in gara per vincere a tutti i costi questo ragazzo ha perso per sempre i benefici del judo. In gara si va, dopo aver imparato la tecnica, a cercare la bellezza del gesto che si riflette nell’ippon ‘magistrale’. In Giappone l’uomo della strada è ancora interessato alla medaglia, ma nell’ambiente del judo si mira a una qualifica più nobile, quella di disciplina educativa.</p><p>Questo avvenimento ci ha permesso di stringere rapporti con professori stranieri e con l’Università di Tsukuba e quindi di proporre tre giorni di discussione e di amicizia sul judo-educazione nella festività di Pasqua, a Villa Salta di Predappio Alta.</p><p>Il testo da cui partiamo a discutere con insegnanti e giornalisti stranieri la questione del judo-educazione, proposto dal sottoscritto, è scaricabile <a href="http://www.busenmilano.org/wp-content/uploads/2012/11/Il-judo-non-è-sport-Capitolo-Primo.pdf">qui</a>, cliccando col tasto destro del mouse e selezionando “salva link con nome”</p><p><iframe src="http://www.youtube.com/embed/H-e_QF3vn9w?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
+      '<p>L’A.I.S.E. (Ass. It. Sport-Educazione) e l’Università del Piemonte Orientale hanno organizzato in Ottobre 2010 a Vercelli il Congresso “Educazione e Sport, il caso del judo” per celebrare il 150° anniversario della nascita del Fondatore del judo</p><p><span id="more-58"></span></p><p>Erano presenti 180 judoisti di tre continenti, giunti da Giappone, U.S.A., Spagna, Francia, Belgio, Germania. In particolare c’era Ayumi Tanimoto, vincitrice dell’oro ad Atene e a Beijing, che ha fatto lezione di randori.<br>La signora Tanimoto, che ha iniziato il judo in una scuola tradizionale, ha spiegato il punto di vista di molte Associazioni nipponiche: che se si manda il ragazzo in gara per vincere a tutti i costi questo ragazzo ha perso per sempre i benefici del judo. In gara si va, dopo aver imparato la tecnica, a cercare la bellezza del gesto che si riflette nell’ippon ‘magistrale’. In Giappone l’uomo della strada è ancora interessato alla medaglia, ma nell’ambiente del judo si mira a una qualifica più nobile, quella di disciplina educativa.</p><p>Questo avvenimento ci ha permesso di stringere rapporti con professori stranieri e con l’Università di Tsukuba e quindi di proporre tre giorni di discussione e di amicizia sul judo-educazione nella festività di Pasqua, a Villa Salta di Predappio Alta.</p><p><p><iframe src="http://www.youtube.com/embed/H-e_QF3vn9w?feature=oembed" allowfullscreen="" width="768" height="576" frameborder="0"></iframe></p>',
   },
   {
     pageTitle: 'Congressi 2006-2007 “il judo e i suoi kata”',
@@ -697,55 +824,112 @@ const video = [
   {
     pageTitle: 'Shin Jin Ichinyo',
     slug: 'video/judo/shin-jin-ichinyo',
+    pageDescription:
+      '<p>Corpo e Mente sono una cosa sola.</p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="Shin Jin Ichinyo" /><meta itemprop="description" content="Shin Jin Ichinyo" /><meta itemprop="uploadDate" content="2023-03-19T20:33:18.000Z" /><meta itemprop="thumbnailUrl" content="https://s2.dmcdn.net/v/UmdlK1a5tcdQYJE0y/x180" /><meta itemprop="duration" content="P1002S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/k1MlYZuLbKZKCOyVlli" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/k1MlYZuLbKZKCOyVlli?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div>',
   },
   {
     pageTitle: 'Metodo di Allenamento, di Abbe kenshiro',
     slug: 'video/judo/metodo-abbe',
+    pageDescription:
+      '<p align="right"><span style="font-family: Arial,Helvetica,sans-serif; font-size: medium;"><strong>Metodo di judo di Abbe Kenshiro sensei, il mio Maestro</strong></span></p><p align="right"><span style="font-family: Arial,Helvetica,sans-serif; font-size: small;"><strong>Cesare Barioli</strong></span></p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="Abbe allenamento" /><meta itemprop="description" content="Abbe allenamento" /><meta itemprop="uploadDate" content="2023-03-20T07:46:14.000Z" /><meta itemprop="thumbnailUrl" content="https://s2.dmcdn.net/v/UmhjE1a60z6ssMHx-/x180" /><meta itemprop="duration" content="P910S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/x8j9cni" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8j9cni?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div>',
   },
   {
     pageTitle: 'La tecnica di Tokio Hirano',
     slug: 'video/judo/tokyo-hirano',
+    pageDescription:
+      '<div align="justify"><p>Il signor Hirano è nato nell’Agosto 1922 ad Awaji, in provincia di Kobe. Raccontano che abbia cominciato il judo a 12 anni. Divenne allievo di Fukushima-sensei a Kyoto. E quest’ultimo l’indirizzò all’università Takushoku a Tokyo, dove studiò con Ushijima-sensei. Considerando questi particolari possiamo dire che ha avuto una formazione <em>‘butokukai’. </em><br>Giunse in Europa nel ’52, forse a Colonia. Stabilitosi ad Anversa, viaggiò in Francia, Germania, Belgio, Svizzera, Austria, Italia… insegnando judo in corsi e stages, come quello di questo film, che è stato girato al castello di Well. Tornò in Giappone nel ’66 riguadagnando l’università Takushoku, dove insegnava judo, facendo periodiche traferte in Europa. Voleva aprire un dojo in Francia, ma non ha portato a termine il progetto. E’ morto nel 1993.</p><p align="right"><em>(C.B.) </em></p><div align="justify"><p><a href="http://www.busenmilano.org/wp-content/uploads/2012/12/fra-small.gif"><img decoding="async" class="alignleft size-full wp-image-296" title="fra-small" src="http://www.busenmilano.org/wp-content/uploads/2012/12/fra-small.gif" alt="" width="18" height="12"></a>Monsieur Hirano est né en aout 1922 à Awaji (province de Kobe). certain disent qu’il a débuté je judo vers 12 ans.&nbsp; Il a ensuite été élève de Fukushima sensei à Kioto. Ce dernier l’a orienté vers l’université Takushoku à Tokio ou il a été&nbsp; élève de Ushijima sensei. selon le regard sur son enseignement on peu dire qu’il a eu une formation Butokukai.</p><p>Il arrive en Europe en 1952 à Cologne selon certains renseignements.&nbsp; Il s’installera par la suite à Anvers et il&nbsp;parcourra&nbsp;la France, l’Allemagne, la Belgique, la Suisse, l’Autriche, l’Italie, etc… ou il donna des cours et des démonstrations (exemple du film au&nbsp;Château&nbsp;de Well). il repart au Japon en 1966. il réintègre l’université&nbsp;Takushoku, ou il enseigne le judo il fera&nbsp;régulièrement&nbsp;des visites en Europe, ou il donnera des cours. il avait eu projet de Dojo en France qu’il n’a pas pu amener à termes car il est décédé en 1993.</p><p align="right"><em>(Serge Angeles)</em></p></div><p>“Ero un ragazzo, quando mi pervenne il ritaglio di un giornale tedesco che parlava di un campione di judo contro 20. Ma passarono sei mesi e il giornale d’oltr’Alpe pubblicava la notizia di un giapponese contro cento…</p><p>Seppi dopo che non aveva trovato 100 avversari, ma solo (credo) 73. Questo era il judo meraviglioso che ci affascinava. Il volto fanciullesco e stupito di Tokio Hirano fa parte dell’immaginario che inseguivamo… (C. Barioli)”.</p><p style="text-align: center;"><iframe loading="lazy" src="http://www.youtube.com/embed/5xgQDNOqghM?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p style="text-align: center;" align="center">Omaggio a Opa Schutte, <em>“nonno”</em> Schutte allo stage d’estate di Tokio Hirano</p><p align="center">L’uomo alto con i capelli bianchi è ‘nonno Schutte’, uno dei padri del judo tradizionale europeo (con Leggett e Jasarin)”</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/S6Kd570Gfzc?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p align="center">Riscaldamento secondo Tokio Hirano</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/sSvn09h2sA0?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><h2 align="center">“Rompere il tempo e lo spazio” la tecnica di Tokio Hirano</h2><p align="center">Te-waza</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/XgeXaWap2ag?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p align="center">Koshi-waza</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/_baE802C8io?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p align="center">Ashi-Waza</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/_Pe4BxQO6SY?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p align="center">Sutemi, makikomi e hikkomi-waza</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/4ARDNmW0r_8?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><h2 align="center"><span style="font-size: large;">Kata di Tokio Hirano</span></h2><p align="center">Randori-no-kata</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/_nH1kKAwWt0?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><h2 align="center"><span style="font-size: large;">Nuovi kata:</span></h2><p align="center">Nanatsu-no-kata – Hirano-no-kata</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/Zsn7OePls3g?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p align="center">Difesa personale e conclusione</p><p align="center"><iframe loading="lazy" src="http://www.youtube.com/embed/0e827j8OIAU?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p></div>',
   },
   {
     pageTitle: 'Uso del Kime-no-kata, di Stefano Maiaso',
     slug: 'video/judo/uso-kime',
+    // href: ,
+    // href: SITE.basePathname + '/pdf/Lallenamento-al-combattimento-reale-english.pdf',
+    pageDescription: `<p><a href=${
+      SITE.basePathname + '/pdf/Lallenamento-al-combattimento-reale.pdf'
+    }>L’allenamento al combattimento reale</a></p><p><a href="http://www.busenmilano.org/wp-content/uploads/2012/11/gbr-small.gif"><img decoding="async" class="alignleft size-full wp-image-265" title="gbr-small" src="http://www.busenmilano.org/wp-content/uploads/2012/11/gbr-small.gif" alt="" width="19" height="12"></a><a href=${
+      SITE.basePathname + '/pdf/Lallenamento-al-combattimento-reale-english.pdf'
+    }>Training for the real fight</a></p>`,
   },
   {
     pageTitle: 'Koshiki no kata - world championship training',
     slug: 'video/judo/koshiki-championship',
+    pageDescription:
+      '<p><iframe src="http://www.youtube.com/embed/xrjd_BjAtaA?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p>',
   },
   {
+    // TODO: sistemare link da qui!
     pageTitle: 'Nage-no-kata e Koshiki-no-kata di Yamashita Yoshiaki con la biografia e un enigma',
     slug: 'video/judo/nage-koshiki',
+    pageDescription: `<p>koshiki no kata:</p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="koshiki-no-kata_yamashita.mov.ff" /><meta itemprop="description" content="koshiki-no-kata_yamashita.mov.ff" /><meta itemprop="uploadDate" content="2023-03-20T08:03:56.000Z" /><meta itemprop="thumbnailUrl" content="https://s1.dmcdn.net/v/Umhx01a61DjDqOjg6/x180" /><meta itemprop="duration" content="P160S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/x8j9dc0" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8j9dc0?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div><p>nage no kata:</p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="nage-no-kata_yamashita.mov.ff" /><meta itemprop="description" content="nage-no-kata_yamashita.mov.ff" /><meta itemprop="uploadDate" content="2023-03-20T08:02:51.000Z" /><meta itemprop="thumbnailUrl" content="https://s2.dmcdn.net/v/Umhw_1a61DeOq5whP/x180" /><meta itemprop="duration" content="P167S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/x8j9dbz" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8j9dbz?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div><p align="justify">Nell’esecuzione del Koshiki-no-kata appare abbastanza chiaro che <em>tori</em> è il sig. Yamashita Yoshiaki mentre <em>uke</em> dovrebbe essere il sig. Nagaoka Hidekazu.</p><p align="justify">Mentre per il Nage-no-kata <em>tori</em> dovrebbe essere sempre il sig. Yamashita Yoshiaki mentre crediamo di riconoscere il sig. Isogai Hajime come <em>uke</em> ma non ne siamo certi.</p><p align="justify">A seguito trovate un fotogramma con gli esecutori dei kata sopra citati e del Ju-no-kata che potete trovare <a href="http://www.busenmilano.org/?p=257" target="_blank">qui</a>.</p><p style="text-align: center;" align="justify"><img decoding="async" class="size-full wp-image-276 aligncenter" title="kata_antichi" src=${
+      SITE.basePathname + '/images/kata_antichi.jpg'
+    } alt="" width="360" height="272"></p><p align="center">Da sinistra: Yamashita, Nagaoka, un non ben identificato judoista e quello che crediamo essere il sig. Isogai Hajime.</p><p style="text-align: left;" align="center"><a href=${
+      SITE.basePathname + '/pdf/yamashita-photogallery.pdf'
+    }>Biografia e foto americane</a></p><p style="text-align: left;" align="center"><img decoding="async" loading="lazy" class="alignleft size-full wp-image-265" title="gbr-small" src=${
+      SITE.basePathname + '/images/gbr-small.gif'
+    } alt="" width="19" height="12"><a href=${
+      SITE.basePathname + '/pdf/muph006.pdf'
+    }>Biography and american photos</a></p><p style="text-align: left;" align="center"><a href=${
+      SITE.basePathname + '/pdf/yamashita_enigma.pdf'
+    }>Un enigma sul signor Yamashita</a></p>`,
   },
   {
     pageTitle: 'Nage-no-kata e biografia di Nagaoka Hidekatsu',
     slug: 'video/judo/nage-nagaoka',
+    pageDescription: `<p><iframe src="http://www.youtube.com/embed/JoGbGsneYZk?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p>
+    <p><a href=${SITE.basePathname + '/pdf/Nagaoka-biografia.pdf'}>Biografia di Nagaoka Hidekatsu</a></p>
+    <p><img decoding="async" loading="lazy" class="alignleft size-full wp-image-265" title="gbr-small" src=${
+      SITE.basePathname + '/images/gbr-small.gif'
+    } alt="" width="19" height="12"><a href=${
+      SITE.basePathname + '/pdf/Nagaoka-biografia-inglese.pdf'
+    }>biography of Nagaoka Hidekatsu</a></p>`,
   },
   {
     pageTitle: 'Ju-no-kata di Kano Jigoro, foto',
     slug: 'video/judo/junokata-kano',
+    pageDescription: `<p>In questa sezione troverete due montaggi fotografici del sig. Kano che esegue Ju-no-kata, il primo in sequenza rapida ed il secondo a velocità rallentata.</p>
+    <p><img decoding="async" loading="lazy" class="alignleft size-full wp-image-265" title="gbr-small" src=${
+      SITE.basePathname + '/images/gbr-small.gif'
+    } alt="" width="19" height="12"></a>In this section you will find two edited version of Mr Kano performing Ju-no-kata. The first is in rapid sequence; the second is in slow motion.</p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="ju no kata kano normal" /><meta itemprop="description" content="ju no kata kano normal" /><meta itemprop="uploadDate" content="2023-03-20T22:24:13.000Z" /><meta itemprop="thumbnailUrl" content="https://s1.dmcdn.net/v/UmvB11a6DqgxPfqnO/x180" /><meta itemprop="duration" content="P103S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/x8jaj7l" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8jaj7l?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="ju no kata kano slow" /><meta itemprop="description" content="ju no kata kano slow" /><meta itemprop="uploadDate" content="2023-03-20T22:25:15.000Z" /><meta itemprop="thumbnailUrl" content="https://s1.dmcdn.net/v/UmvB01a6DrBef3Y8F/x180" /><meta itemprop="duration" content="P667S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/x8jaj7k" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8jaj7k?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div>`,
   },
   {
     pageTitle: 'Ju-no-kata di Isogai Hajime',
     slug: 'video/judo/junokata-isogai',
+    pageDescription: `<p align="justify">Di seguito invece un filmato che riprende un esecuzione del Ju-no-kata prima del 1940.</p><p style="text-align: left;" align="center">Tori dovrebbe essere il sig. Isogai Hajime, ma siamo alla ricerca di maggiori dettagli, se qualcuno avesse informazioni sugli esecutori o sul luogo della registrazione può aiutarci nella ricerca.</p><p style="text-align: left;" align="center"><span style="font-size: medium;"><strong>Probabile ju-no-kata di Isogai Hajime </strong></span></p><p><iframe src="http://www.youtube.com/embed/N7Le9LeVsEY?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p style="text-align: left;" align="center">Di seguito un’immagine degli esecutori del filmato (il primo ed il secondo da destra). Probabilmente il tori del filmato precedente è il primo a destra nell’immagine ed assomiglia molto ad Isogai Hajime.</p><p style="text-align: left;" align="center"><img decoding="async" loading="lazy" class="size-full wp-image-258 alignnone" title="junokata-esecutori" src=${
+      SITE.basePathname + '/images/junokata-esecutori.jpg'
+    } alt="" width="360" height="272"></p><p style="text-align: left;" align="center">Isogai Hajime</p><p style="text-align: left;" align="center"><img decoding="async" loading="lazy" class="alignleft size-full wp-image-259" title="isogai_hajime" src=${
+      SITE.basePathname + '/images/isogai_hajime.jpg'
+    } alt="" width="150" height="150"></p>`,
   },
   {
     pageTitle: 'Randori davanti all’imperatore – 1922Ju-no-kata di Isogai Hajime',
     slug: 'video/judo/randori-imperatore',
+    pageDescription:
+      '<p align="justify">Di seguito possiamo osservare i singoli randori; di alcuni esecutori riusciamo a risalire all’identità attraverso l’analisi tecnica (il kata-guruma di Mifune Kyuzo è inconfondibile).</p><p align="justify">Altri sono sicuramente nomi famosi del primo judo ma purtroppo li abbiamo visti in foto quando oramai erano gia avanti con l’età; qui invece sono giovani ed è più difficile identificarli.</p><p style="text-align: left;" align="center"><strong>Primo randori: due studenti “mudansha” </strong></p><p><iframe src="http://www.youtube.com/embed/75wf3L7DRMg?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p style="text-align: left;" align="center"><strong>Secondo randori: 2° dan contro 3° dan </strong></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/qasGAXl60Wg?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p style="text-align: left;" align="center"><strong>Terzo randori: 3° dan contro 3° dan</strong></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/54Nubmy4WsI?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p style="text-align: left;" align="center"><strong>Quarto randori: 5° dan (Mifune Kyuzo) contro 3° dan</strong></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/t_2EVfT03kA?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p style="text-align: left;" align="center"><strong>Quinto randori: 6°dan contro 3° dan</strong></p><p><iframe loading="lazy" src="http://www.youtube.com/embed/-H7r2-z3rVM?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p><p style="text-align: left;" align="center">Inoltre includiamo questo breve filmato di una sessione di randori probabilmente ripresa nello stesso luogo dove il sig. Kano ha fatto lezione di Roppo-no-kuzushi</p><p><iframe loading="lazy" src="http://www.youtube.com/embed/fvh3LtnrybU?feature=player_embedded" width="640" height="360" frameborder="0"></iframe></p>',
   },
   {
     pageTitle: 'La tecnica di Kyuzo Mifune genio del judo',
     slug: 'video/judo/tecnica-mifune',
+    pageDescription:
+      '<p align="justify"><span style="font-family: Arial,Helvetica,sans-serif;">Il signor Mifune Kyuzo è stato un judoista grandissimo, molto reputato per il nage-waza, famoso per o-guruma e kuki-nage (‘proiezione aerea’, simile a sumi-otoshi). Nel filmato ‘Randori davanti all’Imperatore’ (1922) si riconosce il suo kata-guruma. Non era amante dei kata e del ne-waza, ma è molto interessante la sua tecnica di difesa personale.&nbsp; </span></p><p><iframe width="560" height="315" src="https://www.youtube.com/embed/b6H4PXgx3zU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>',
   },
   {
     pageTitle: 'Kime-shiki di Nagaoka Hidekazu (1876-1952) e Samura Kaichiro (1880-1964)',
     slug: 'video/judo/kime-nagaoka-samura',
+    pageDescription:
+      '<h3>Sei ryoku-zen’yo kokumintaiku no kata</h3><p>I Maestri praticano vestiti e in una stanza, a significare che l’allenamento del Sei-ryoku-zen’yo-kokumin-taiku-no-kata può essere fatto dovunque, senza la necessità di <em>gi</em> e tatami.</p><p>El Kime-shiki de Nagaoka Hidekazu (1876 – 1952) y Samura Kaichiro (1880 – 1964).</p><p>Los Maestros practican vestidos y en una habitación, el que significa que el entrenamiento del Sei-ryoku-zen’yo-kokumin-taiku-no-kata puede ser realizado por todas partes, sin necesitar de gi y de tatami.</p><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="kime shiki by Nagaoka Hidezaku" /><meta itemprop="description" content="kime shiki by Nagaoka Hidezaku" /><meta itemprop="uploadDate" content="2023-03-20T22:46:52.000Z" /><meta itemprop="thumbnailUrl" content="https://s1.dmcdn.net/v/UmvNm1a6E9St9ccbd/x180" /><meta itemprop="duration" content="P33S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/x8jaju8" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8jaju8?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div>',
   },
   {
     pageTitle: 'Lezione di roppo-no-kuzushi di Kano Jigoro',
     slug: 'video/judo/roppo-no-kuzushi',
+    pageDescription: `<p align="justify">Le immagini della lezione del signor Kano vengono comprese quando si conosce il racconto della strategia roppo-no-kuzushi.</p><p><a href=${
+      SITE.basePathname + '/pdf/jigoro-kano-Roppo-no-kuzushi.pdf'
+    }>jigoro kano-Roppo no kuzushi</a></p><p><a href=${
+      SITE.basePathname + '/pdf/jigoro-kano-Roppo-no-kuzushi-english.pdf'
+    }>jigoro kano-Roppo no kuzushi, english version</a></p><p><a href=${
+      SITE.basePathname + '/pdf/jigoro-kano-Roppo-no-kuzushi-spanish-version.pdf'
+    }>jigoro kano-Roppo no kuzushi, spanish version</a></p>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="Roppo no Kuzushi by Jigoro Kano" /><meta itemprop="description" content="Roppo no Kuzushi by Jigoro Kano" /><meta itemprop="uploadDate" content="2023-03-20T22:54:26.000Z" /><meta itemprop="thumbnailUrl" content="https://s1.dmcdn.net/v/UmvPm1a6EGdkwZYOl/x180" /><meta itemprop="duration" content="P106S" /><meta itemprop="embedUrl" content="https://www.dailymotion.com/embed/video/x8jajxs" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8jajxs?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div>`,
   },
 ];
 
-export const pageData = [...busenMilano, ...judoEducazione, ...video];
+export const pageData = [...busenMilano, ...judoEducazione, ...video, ...judoAdattato, ...intornoAlDojo, ...report];
