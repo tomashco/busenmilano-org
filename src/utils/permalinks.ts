@@ -20,7 +20,7 @@ export const cleanSlug = (text = '') =>
     .map((slug) => slugify(slug))
     .join('/');
 
-export const buildHref = (href = '') => (href.endsWith('/') ? href : href + '/');
+export const buildHref = (href = '') => (href.endsWith('/') || href.endsWith('.pdf') ? href : href + '/');
 
 export const POST_PERMALINK_PATTERN = trimSlash(BLOG?.post?.permalink || '/%slug%');
 
