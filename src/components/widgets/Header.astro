@@ -42,59 +42,57 @@ const linksLength = links.length;
   ]}
   id="header"
 >
-  <div class="py-3 px-3">
+  <div class="px-3">
     <div>
       <div class="flex items-center md:hidden">
         <!-- {showToggleTheme && <ToggleTheme />} -->
         <ToggleMenu />
       </div>
     </div>
-    <nav class="flex w-full text-l md:text-sm md:flex h-[calc(100vh-72px)] md:h-auto" aria-label="Main navigation">
-      <ul class="flex w-full justify-center flex-col pt-8 md:pt-0 md:flex-row">
-        {
-          links.map(({ text, href = '', links }, index) => (
-            <li class={`${links?.length ? 'dropdown flex-col' : ''} flex`}>
-              {Math.round(linksLength / 2 - 1) === index && (
-                <a class="flex" href={getHomePermalink()}>
-                  <Logo />
-                </a>
-              )}
-              {links?.length ? (
-                <>
-                  <button class="font-medium hover:text-gray-900 px-4 py-3 w-full flex items-center transition duration-150 ease-in-out">
-                    <a href={buildHref(href)}>{text}</a>
-                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
-                  </button>
-                  <ul class="dropdown-menu  mt-9 md:backdrop-blur-md rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
-                    {links.map(({ text: text2, href: href2 = '' }) => (
-                      <li class="flex justify-start md:justify-center w-full">
-                        <a
-                          class="first:rounded-t md:w-full md:text-center last:rounded-b md:hover:bg-gray-200 py-2 px-5 block whitespace-no-wrap"
-                          href={buildHref(href + href2)}
-                        >
-                          {text2}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <a
-                  class="font-medium px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  href={buildHref(href)}
-                >
-                  {text}
-                </a>
-              )}
-            </li>
-          ))
-        }
-      </ul>
+    <nav class="flex w-full text-l md:text-sm md:flex" aria-label="Main navigation">
+      {
+        (
+          //
+          <ul class="flex w-full justify-center flex-col md:pt-0 md:flex-row">
+            {links.map(({ text, href = '', links }, index) => (
+              <li class={`${links?.length ? 'dropdown' : ''} sm:flex`}>
+                {Math.round(linksLength / 2) === index && (
+                  <a class="sm:flex sm:align-middle" href={getHomePermalink()}>
+                    <Logo />
+                  </a>
+                )}
+                {links?.length ? (
+                  <>
+                    <button class="font-medium hover:text-gray-900 px-4 w-full flex items-center transition duration-150 ease-in-out">
+                      <a href={buildHref(href)}>{text}</a>
+                      <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
+                    </button>
+                    <ul class="dropdown-menu md:backdrop-blur-md rounded md:absolute sm:mt-9 pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                      {links.map(({ text: text2, href: href2 = '' }) => (
+                        <li class="flex justify-start md:justify-center w-full">
+                          <a
+                            class="first:rounded-t md:w-full md:text-center last:rounded-b md:hover:bg-gray-200 py-2 px-5 block whitespace-no-wrap"
+                            href={buildHref(href + href2)}
+                          >
+                            {text2}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <a
+                    class="font-medium px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    href={buildHref(href)}
+                  >
+                    {text}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        )
+      }
     </nav>
-    <!-- <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
-      <div class="hidden items-center md:flex">
-        {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
-      </div>
-    </div> -->
   </div>
 </header>

@@ -75,16 +75,18 @@ const { slug } = Astro.params;
           articles &&
             articles.map(async ({ title, href, image }: articleProps) => (
               <li class="flex p-6 hover:bg-[#e1e1e1]">
-                <Picture
-                  class="rounded-md"
-                  widths={[100]}
-                  sizes="150px"
-                  aspectRatio={1 / 1}
-                  loading="eager"
-                  width={150}
-                  height={150}
-                  {...image}
-                />
+                <div class="min-w-[5rem] min-h-[5rem] sm:min-w-[10rem] sm:min-h-[10rem]">
+                  <Picture
+                    class="rounded-md"
+                    widths={[100]}
+                    sizes="15rem"
+                    aspectRatio={1 / 1}
+                    loading="eager"
+                    width={150}
+                    height={150}
+                    {...image}
+                  />
+                </div>
                 <a class="px-6 pt-3 text-lg italic font-serif hover:text-[#cf2e2e]" href={buildHref(href)}>
                   {title}
                 </a>
