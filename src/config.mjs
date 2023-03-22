@@ -3,8 +3,8 @@ import defaultImage from './assets/images/busenmilano-index.jpg';
 const CONFIG = {
   name: 'Busen Milano',
 
-  origin: 'https://tomashco.github.io',
-  basePathname: '/busenmilano',
+  origin: 'https://busenmilano.org',
+  basePathname: '',
   trailingSlash: true,
 
   title: 'Busen Milano',
@@ -12,12 +12,12 @@ const CONFIG = {
     'La storia del Bu-sen di Milano è legata alla vita di Cesare Barioli, che iniziò a far judo quando in Italia non si conosceva ancora molto di questa disciplina.',
   defaultImage: defaultImage,
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'light:only', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-  language: 'en',
+  language: 'it',
   textDirection: 'ltr',
 
-  dateFormatter: new Intl.DateTimeFormat('en', {
+  dateFormatter: new Intl.DateTimeFormat('it', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
@@ -58,5 +58,3 @@ const CONFIG = {
 };
 
 export const SITE = { ...CONFIG, blog: undefined };
-export const BLOG = CONFIG.blog;
-export const DATE_FORMATTER = CONFIG.dateFormatter;
