@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
 import Logo from '~/components/Logo.astro';
-// import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
 import { getHomePermalink, buildHref } from '~/utils/permalinks';
@@ -25,8 +24,6 @@ export interface Props {
   links?: Array<MenuLink>;
   actions?: Array<ActionLink>;
   isHomepage?: boolean;
-  showToggleTheme?: boolean;
-  showRssFeed?: boolean;
   position?: string;
 }
 
@@ -35,24 +32,16 @@ const { links = [] } = Astro.props;
 const linksLength = links.length;
 ---
 
-<header
-  class:list={[
-    // { sticky: isSticky, relative: !isSticky },
-    // 'top-0 z-40 flex-none w-full transition-all ease-in duration-100',
-  ]}
-  id="header"
->
+<header id="header">
   <div class="px-3">
     <div>
       <div class="flex items-center md:hidden">
-        <!-- {showToggleTheme && <ToggleTheme />} -->
         <ToggleMenu />
       </div>
     </div>
     <nav class="flex w-full text-l md:text-sm md:flex" aria-label="Main navigation">
       {
         (
-          //
           <ul class="flex w-full justify-center flex-col md:pt-0 md:flex-row">
             {links.map(({ text, href = '', links }, index) => (
               <li class={`${links?.length ? 'dropdown' : ''} sm:flex`}>

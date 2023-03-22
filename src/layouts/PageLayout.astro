@@ -34,7 +34,7 @@ const { slug } = Astro.params;
 
 <Layout {meta}>
   <slot name="header">
-    <Header {...headerData} showRssFeed showToggleTheme />
+    <Header {...headerData} />
   </slot>
   <main>
     <div class="flex flex-col mx-auto align-middle max-w-[45rem] px-10">
